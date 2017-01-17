@@ -78,7 +78,7 @@ function getPosMap(){
 
   ret[key] = [curx,cury];
   
-  for (var grpSize = 1; grpSize <= dimn; grpSize++){
+  for (var grpSize = 1; grpSize <= dimn * 2; grpSize++){
     for (var j = 0; j < grpSize; j++){
       key++;
       curx += xstep;
