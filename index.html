@@ -40,11 +40,11 @@
   </head>
   <body>
     <div id="topRight">
-      ctrl
+      <label for="toggleCtrl">ctrl</label>
       <input type="checkbox" id="toggleCtrl" onchange="document.getElementById('ctrl').style.display = this.checked ? 'block' : 'none'"/>
       <div id="ctrl" style="display:none;">
         <hr/>
-        circle count:
+        # of circles:
         <input type="range" min="0" max="4" step="1" id="circleCount" value="2" onchange="updateInputs()">
         <br/>
         circle size: 
