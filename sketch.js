@@ -11,7 +11,7 @@ var circleCounts = [64,128,256,1024,2048];
 var circles,circleSize,cleanUp,bgHue,saturationMod;
 
 function setup() {
-  frameRate(15);
+  frameRate(20);
   width = window.innerWidth || d.documentElement.clientWidth || document.body.clientWidth;
   height = window.innerHeight|| d.documentElement.clientHeight|| document.body.clientHeight;
   createCanvas(width, height);
