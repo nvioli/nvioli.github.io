@@ -1,0 +1,9 @@
+todo
+----
+gear menu
+responsiveness
+
+to discuss
+----------
+looping
+autoscroll
