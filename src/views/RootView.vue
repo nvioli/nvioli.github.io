@@ -77,7 +77,7 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
   font-family: Baskerville Old Face, Baskerville, Hoefler Text, Garamond, Times New Roman, serif;
   text-align: center;
 }
