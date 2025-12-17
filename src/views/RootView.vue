@@ -87,7 +87,7 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  max-width: 50rem;
+  max-width: 65rem;
   margin: 0 auto;
 }
 
