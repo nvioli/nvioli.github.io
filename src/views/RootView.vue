@@ -83,7 +83,8 @@ const changeTrack = (newTrack: string) => { currentTrack.value = newTrack }
 }
 
 .intro {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   max-width: 50rem;
