@@ -1,0 +1,57 @@
+{
+  "name": "variations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "buildjs": "node_modules/.bin/webpack && npm run testjs; exit 0;",
+    "buildstatic": "cp -r index.html dist/ && cp -r wood_block-hi.wav dist/",
+    "build": "npm run buildjs & npm run buildstatic",
+    "watchjs": "node_modules/.bin/npm-watch buildjs",
+    "watchhtml": "node_modules/.bin/npm-watch buildstatic",
+    "watch": "npm run watchjs & npm run watchhtml",
+    "server": "node_modules/.bin/reload -d dist/ -b",
+    "dev": "npm run build & npm run testjs & npm run watch & npm run server",
+    "testjs": "node_modules/.bin/mocha; exit 0;"
+  },
+  "watch": {
+    "buildstatic": {
+      "patterns": [
+        "src/static"
+      ],
+      "extensions": "*"
+    },
+    "buildjs": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js"
+    },
+    "testjs": {
+      "patterns": [
+        "test"
+      ],
+      "extensions": "js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvioli/variations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvioli/variations/issues"
+  },
+  "homepage": "https://github.com/nvioli/variations#readme",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "mocha": "^3.4.2",
+    "npm-watch": "^0.1.9",
+    "reload": "^1.1.5",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "p5": "^0.5.11"
+  }
+}

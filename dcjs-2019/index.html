@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+            <section>
+               <div class="livecode stretch no-preview">
+                  <pre><code class="javascript">
+var poly = new Tone.PolySynth(4, Tone.Synth).toMaster();
+var fmSynth = new Tone.FMSynth({volume:-10}).toMaster();
+// TODO set modulationIndex
+
+var drumCompress = new Tone.Compressor({ "threshold" : -30, "ratio" : 6, "attack" : 0.3, "release" : 0.1}).toMaster();
+var distortion = new Tone.Distortion({ "distortion" : 0.4, "wet" : 0.4});
+var kick = new Tone.MembraneSynth({ "pitchDecay" : 0.01, "octaves" : 6, "oscillator" : { "type" : "square4" }, "envelope" : { "attack" : 0.001, "decay" : 0.2, "sustain" : 0 }}).connect(drumCompress);
+var snare = new Tone.Player({ "url" : "snare.mp3", "retrigger" : true, "fadeOut" : 0.1, "volume": -20}).chain(distortion, drumCompress);
+
+var bass = new Tone.Loop(time => {
+	//poly.triggerAttackRelease("F1", "8n", time);
+	//poly.triggerAttackRelease(["F2","Ab2","C3"], "8n", "+8n");
+}, "4n").start(0);
+
+var drum1 = new Tone.Loop(time => {
+   kick.triggerAttackRelease("C2", "8n",time);
+}, "1n").start(0);
+
+var drum2 = new Tone.Loop(time => {
+   kick.triggerAttackRelease("G2", "8n",time);
+}, "4n").start("16n");
+
+var drum3 = new Tone.Loop(time => {
+   snare.start(time).stop(time + 0.1);
+}, "4n").start("8n");
+
+var musicForAirportsNotes = ["F2","Ab2","C3","Db3","Eb3","F3","Ab3"];
+var mfa = new Tone.Loop(time => {
+   fmSynth.triggerAttackRelease(musicForAirportsNotes[Math.floor(Math.random()*musicForAirportsNotes.length)],"4n",time);
+}, "4n").start("2n");
+
+drum2.probability = 0.5;
+drum3.probability = 0.25;
+
+Tone.Transport.start();
+
+                  </code></pre>
+                  <pre><code class="html"><script type="text/javascript" src="https://tonejs.github.io/build/Tone.min.js"></script></code></pre>
+
+
+               </div>
+            </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+               { src: 'plugin/livecode/livecode.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+		</script>
+	</body>
+</html>

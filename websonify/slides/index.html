@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/webSonify.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><!-- Title -->
+          <h1>WebSonify</h1>
+          <h3>Nick Violi</h3>
+          <br/><br/>
+          <h5>
+            <a href="https://twitter.com/nvioli">@nvioli</a>
+            <span>&nbsp;/&nbsp;</span>
+            <a href="https://web-sonify.glitch.me/">https://web-sonify.glitch.me/</a></h5>
+        </section>
+        <section data-background-video="./static/ga_dashboard.mov" data-background-size="contain" data-background-video-loop="true" data-autoplay></section>
+        <!-- <section data-background-iframe="https://analytics.google.com/analytics/web/#/realtime/rt-overview/a1836649w3240076p3315059/" data-background-interactive></section> -->
+        <section>
+          <blockquote>
+            If the visual sense is already highly loaded, sonification can be a suited alternative to provide additional information
+          </blockquote>
+          <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Thomas Hermann</div>
+        </section>
+        <section data-background-image="./static/metal_detector.JPG" data-background-size="contain" style="min-height: 100% !important;top:0;">
+          <audio data-autoplay src="./static/metal_detector.mp3"></audio>
+          <div style="position: absolute;bottom: 30px;background: #e1dfe2;font-size:70%;">
+            https://www.macdill.af.mil/News/Photos/igphoto/2001848023/
+          </div>
+        </section>
+        <section data-background-image="./static/geiger_counter.jpg" data-background-size="contain" style="min-height: 100% !important;top:0;">
+          <audio data-autoplay src="./static/geiger_counter.mp3"></audio>
+          <div style="position: absolute;bottom: 30px;background: #e1dfe2;font-size:70%;">
+            https://www.flickr.com/photos/mightyohm/6882732611
+          </div>
+        </section>
+        <section>
+          Other Sonification Example?
+        </section>
+        <section>
+          <section>
+            <h1>Live Demo</h1>
+          </section>
+          <!-- DEMO -->
+          <!-- <section id="liveDemo" data-background-iframe="https://web-sonify.glitch.me/" data-background-interactive>
+            TODO local server!
+          </section> -->
+          <!-- END DEMO -->
+        </section>
+        <section>
+          <pre>
+            <code class="javascript">
+function liveQuery() {
+  gapi.client.analytics.data.realtime.get({
+    ids: `ga:${constants.VIEW_ID}`,
+    metrics: "rt:activeUsers",
+    dimensions: "rt:goalId"
+    // more metrics and dimensions could be added in the future
+  }).then(response => {
+    // response is ~ 743B!
+    // response.result.rows: [["(not set)","90"],["1","2"],["11","2"],["3","2"],["4","40"]]
+
+    const groups = mapGoalsToGroups(response.result.rows);
+    // {groupA: 92, groupB: 40, groupC: 4}
+
+    scheduleNotes(groups);
+
+    // recurse
+    setTimeout(liveQuery,60000);
+  })
+}
+            </code>
+          </pre>
+        </section>
+        <section>
+          <style>
+            #play92notes {
+              height: 25px;
+              float: left;
+              box-sizing: border-box;
+              width:100%;
+              position:relative;
+              background: repeating-linear-gradient(
+                to right,
+                rgba(32,64,0,0.4),
+                rgba(32,64,0,0.4) calc(100% / 23 / 2),
+                rgba(32,64,0,0.25) calc(100% / 23 / 2),
+                rgba(32,64,0,0.25) calc(100% / 23)
+              );
+            }
+
+            #play92notes::before {
+              content: " ";
+              display:block;
+              border: 3px solid rgba(32,64,0,0.8);
+              box-sizing: border-box;
+              height:100%;
+              position:relative;
+              width: calc(100% / 23 / 2);
+              left: var(--playing-note-left);
+              opacity: 1;
+            }
+          </style>
+          <script>
+            let notePlaying = 0;
+            setInterval(() => {
+              const notePlayingLeft = notePlaying++ * 100 / 23 % 100;
+              document.getElementById("play92notes").style.setProperty("--playing-note-left", `${notePlayingLeft}%`);
+            },60 * 1000/92);
+          </script>
+          <div id="play92notes"></div>
+        </section>
+        <section data-transition="none-out">
+          <pre>
+
+                    0   0   0   0   0   0   0
+                    |   |   |   |   |   |   |
+                    |   |   |   |   |   |   ⤷ 2^0 =  1
+                    |   |   |   |   |   |
+                    |   |   |   |   |   ⤷---- 2^1 =  2
+                    |   |   |   |   |
+                    |   |   |   |   ⤷-------- 2^2 =  4
+                    |   |   |   |
+                    |   |   |   ⤷------------ 2^3 =  8
+                    |   |   |
+                    |   |   ⤷---------------- 2^4 = 16
+                    |   |
+                    |   ⤷-------------------- 2^5 = 32
+                    |
+                    ⤷------------------------ 2^6 = 64
+
+
+
+          </pre>
+        </section>
+        <section data-transition="none-in">
+          <pre>
+
+               92 = 1   0   1   1   1   0   0
+                    |   |   |   |   |   |   |
+                    |   |   |   |   |   |   ⤷ 2^0 =  1 * 0 =  0
+                    |   |   |   |   |   |
+                    |   |   |   |   |   ⤷---- 2^1 =  2 * 0 =  0
+                    |   |   |   |   |
+                    |   |   |   |   ⤷-------- 2^2 =  4 * 1 =  4
+                    |   |   |   |
+                    |   |   |   ⤷------------ 2^3 =  8 * 1 =  8
+                    |   |   |
+                    |   |   ⤷---------------- 2^4 = 16 * 1 = 16
+                    |   |
+                    |   ⤷-------------------- 2^5 = 32 * 1 =  0
+                    |
+                    ⤷------------------------ 2^6 = 64 * 1 = 64
+                                                             ____________________
+
+                                                             4 + 8 + 16 + 64 = 92
+          </pre>
+        </section>
+        <section>
+          <img src="./static/92notes_noOffset.png" />
+          <img src="./static/92notes.png" class="fragment"/>
+        </section>
+        <section>
+          Future Work
+        </section>
+        <section>
+          <blockquote>
+            Ambient music must be able to accommodate many levels of listening attention without enforcing one in particular; it must be as ignorable as it is interesting.
+          </blockquote>
+          <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Brian Eno</div>
+        </section>
+        <section>
+          <blockquote>
+            [Y]ou only need to have three legs on a table. After two, three meant many, and that was it, you don't have to go any further than that: the three components of songwriting, the three chords of rock 'n' roll or the blues--that always seemed to be the number.
+          </blockquote>
+          <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Jack White</div>
+        </section>
+        <section>
+          <blockquote>
+            Music makes you feel something [...] I don't remember the last time I was moved by looking at a line chart. I think it's the right medium for human data, a medium that has this very primal, visceral quality to it.
+          </blockquote>
+          <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Brian Foo, Data-Driven DJ</div>
+        </section>
+        <section>
+          <h1>Thanks.</h1>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ],
+        width:"100%",
+        height:"100%"
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,683 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Javascript for Sound Art</title></title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="css/variations.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section data-background-iframe="http://localhost:8080/background.html" data-background-interactive>
+            <h1>Javascript for Sound Art with <span style="color:#ed225d">P5.js</span></h1>
+            <h3>Nick Violi / <span style="    text-transform: initial;">GlobalGiving</span></h3>
+            <h4>dcjs 9.14.2017</h4>
+            <!-- <a href="javascript:void(0)" onclick="Reveal.slide(document.getElementsByClassName('slides')[0].childNodes.length)">last slide</a> -->
+          </section>
+          <section>
+            <img data-src="./static/v.jpg" class="stretch" />
+          </section>
+        </section>
+        <section>
+          <h1>1. Sound</h1>
+        </section>
+        <!-- <section>
+          <iframe data-src="https://teropa.info/blog/2016/07/28/javascript-systems-music.html" class="stretch"></iframe>
+          <aside class="notes">
+            About a year ago, I read this fascinating blog post which inspired me to talk to you all tonight. The author, a Finnish developer named Tero Parviainen, used javascript to recreate the works of two of my favorite composers, Steve Reich and Brian Eno, so I instantly knew it was for me. Referring back to it to put together this presentation, I noticed that I never got to the third chapter because I was so excited about the second one that I immediately started building what I’m going to show you tonight.
+          </aside>
+        </section> -->
+        <!-- <section>
+          <iframe data-src="http://localhost:8080/repeat.html" class="stretch"></iframe>
+          <aside class="notes">
+            <p>The author of this post does a great job of introducing the concepts I’m going to be talking about tonight, so I’ll play his second demo -- his implementation of Music for Airports #2 -- while I read a quick excerpt from his introduction.</p>
+
+            <p>Systems music is an idea that explores the following question: What if we could, instead of making music, design systems that generate music for us?</p>
+
+            <p>With Web Audio we can do something Reich, Riley, Oliveros, and Eno could not do all those decades ago: They could only share some of the output of their systems by recording them. We can share the system itself.</p>
+          </aside>
+        </section> -->
+        <section>
+          <section>
+            <img data-src="./static/score.jpg" class="stretch"/>
+            <aside class="notes">
+              <p>So, like I said, I immediately started looking for a way to play around with some of these ideas and some of the code that Tero generously shared, and after a few hours of looking through the history of systems music and its most famous composers, I was reminded of a piece by the great John Cage called Variations I.</p>
+              <p>Here’s the entire score of the piece (I had to actually go to a library to get a look at it), and I don’t want you to read it because (a) making your audience read slides is a terrible way to give a presentation, and (b) because I had to read it like 100 times before I understood it -- as brilliant a composer as Cage was, I think his technical communications skills could have used some work.</p>
+              <p>But I wanted to show it to emphasize how short and concise it is, and yet how much complexity and possibility it contains</p>
+            </aside>
+          </section>
+          <section>
+            <pre class="stretch"><code data-trim>
+              document.getElementById(info).innerHTML = "Now playing";
+
+              setTimeout(() => {
+                  document.getElementById(info).innerHTML =
+                    "Thank you for listening.";
+                },
+                (4 * 60 + 33) * 1000
+              )
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <video data-src="./static/transparency.mp4" class="stretch" data-autoplay/>
+          <aside class="notes">
+            <p>Here’s how the piece works: Cage has provided us with a transparency sheet with a bunch of dots on it, and some other sheets containing lines. There’s nothing special about these sheets; you could easily make your own, but I decided to use his for historical accuracy.</p>
+            <p>Each musician in the ensemble is meant to choose one of the points on the point sheet, choose one of the line sheets, overlay the two transparencies, and measure the distance from the point to each of the lines on the sheet. These five distances give the musician some parameters around the notes she’s going to play -- their pitch, amplitude, duration, overtone structure, and earliest occurrence. Some of the dots are bigger than the others, and for the bigger dots, the process is repeated to give the musician more notes to play.</p>
+            <p>When I first started reading about this piece, I thought the score would have to be many pages long to explain all the details involved in calculating all the parameters of the musicians’ parts, so I was a little surprised to find just this short paragraph. Cage leaves all the details of how to interpret his instructions up to the musicians performing the piece, so I had to make a lot of decisions about my implementation. I’d love it if some of you took some of my code and monkeyed with some of my decisions to create a new a different piece (or start from scratch on your own!)</p>
+          </aside>
+        </section>
+        <section>
+          <h1>What do we need to build this piece?</h1>
+        </section>
+        <section>
+          <img data-src="./static/sonatina.jpg" class="stretch"/>
+          <aside class="notes">
+            <p>What do we need to recreate this piece? First, we need to be able to play arbitrary notes on arbitrary instruments.</p>
+            <p>Luckily, Tero provided us with a sample library and some code to do just that. The Sonatina Symphonic Orchestra contains short, isolated samples of individual notes from 32 instruments.</p>
+            <p>There’s only one catch: each instrument doesn’t have recordings of every single note; instead they just sampled 3 or 4 per octave. This decision was made to save space, and while at first it may seem that it means the sample library is useless because it’s so limited, there’s a fascinating piece of math that lets us recreate the notes we don’t have.</p>
+          </aside>
+        </section>
+        <section>
+          <pre><code data-trim class="javascript stretch" contenteditable="true">
+            exports.samples = {
+              '1st Violins': [
+                {pitch: 'A#', octave: 3, file: 'Samples/1st Violins/1st-violins-sus-a%233.wav'},
+                {pitch: 'A#', octave: 4, file: 'Samples/1st Violins/1st-violins-sus-a%234.wav'},
+                //...
+                {pitch: 'G', octave: 5, file: 'Samples/1st Violins/1st-violins-sus-g5.wav'},
+                {pitch: 'G', octave: 6, file: 'Samples/1st Violins/1st-violins-sus-g6.wav'}
+              ],
+              '2nd Violins': [
+                {pitch: 'A#', octave: 3, file: 'Samples/2nd Violins/2nd-violins-sus-a%233.wav'},
+                //...
+                {pitch: 'G', octave: 6, file: 'Samples/2nd Violins/2nd-violins-sus-g6.wav'}
+              ],
+              'Alto Flute': [
+                {pitch: 'A#', octave: 3, file: 'Samples/Alto Flute/alto_flute-a%233.wav'},
+                //...
+              ],
+              'Bass Clarinet': [
+                {pitch: 'B', octave: 2, file: 'Samples/Bass Clarinet/bass_clarinet-b2.wav'},
+                //...
+              ],
+              //etc.
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h2>Just one catch</h2>
+          <pre><code data-trim class="bash">
+            $ cd Samples/Cello
+            $ ls
+            cello-a2.wav  cello-c2.wav  cello-d#2.wav  cello-f#2.wav
+            cello-a3.wav  cello-c3.wav  cello-d#3.wav  cello-f#3.wav
+            cello-a4.wav  cello-c4.wav  cello-d#4.wav  cello-f#4.wav
+            cello-a5.wav  cello-c5.wav  cello-d#5.wav  cello-f#5.wav
+          </code></pre>
+          <aside class="notes">
+            <p>There’s only one catch: each instrument doesn’t have recordings of every single note; instead they just sampled 3 or 4 per octave. This decision was made to save space, and while at first it may seem that it means the sample library is useless because it’s so limited, there’s a fascinating piece of math that lets us recreate the notes we don’t have.</p>
+          </aside>
+        </section>
+        <section>
+          <h2 style="margin:0;">Math to the rescue!</h2>
+          <div class="fragment">
+            <p style="margin:0px;font-size:75%;">One octave change:</p>
+            <p style="font-weight:800;text-align:center;font-size:140%;margin-top:-10px;">2 ✕ frequency<span class="fragment"> = 2 ✕ speed</span></p>
+          </div>
+
+          <div class="fragment">
+            <p style="margin-bottom:0px;font-size:75%;">So <em>m</em> octave changes:</p>
+            <p style="font-weight:800;text-align:center;font-size:140%;margin-top:-25px;">2<sup><em>m</em></sup> ✕ speed</p>
+          </div>
+
+          <div class="fragment">
+            <p style="margin-bottom:0px;font-size:75%;">There are 12 equal-spaced notes per octave, so to move by <em>n</em> notes:</p>
+            <p style="font-weight:800;text-align:center;font-size:140%;margin-top:-10px;">2<sup><em>n</em>/12</sup> ✕ speed</p>
+          </div>
+          <aside class="notes">
+            The most common way to tune instruments in the western tradition is called the equal temperament system, because all the notes are an equal distance from each other. Furthermore, to move from a note to the same note in the next octave, you simply double the frequency. There are 12 notes in an octave, so the bottom formula here gives the relationship between two notes m semitones apart. Therefore, if we adjust the speed of a sample by precisely that amount, the resulting playback will be exactly the desired note!
+          </aside>
+        </section>
+        <section>
+          <pre><code data-trim class="javascript" contenteditable="true">
+            const OCTAVE = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+
+            function noteToValue(note) {
+              return note.octave * 12 + OCTAVE.indexOf(note.pitch);
+            }
+
+            function getNoteDistance(note1, note2) {
+              return noteToValue(note1) - noteToValue(note2);
+            }
+
+            function getPlaybackRate(noteDistance) {
+              return Math.pow(2, noteDistance / 12);
+            }
+          </code></pre>
+          <aside class="notes">
+            We use these three one-line functions to let us play any note given the limited samples we have available.
+          </aside>
+        </section>
+        <section>
+          <section>
+            <pre><code data-trim class="stretch javascript" contenteditable="true">
+              function preloadNote(p5,instrument,note) {
+                const nearestSample = getNearestSample(instrument,note);
+                const noteDistance = getNoteDistance(note,nearestSample);
+                note.pitchAdjust = getPlaybackRate(noteDistance);
+
+                note.sample = p5.loadSound(nearestSample.file, () => {
+                  setupNote(note)
+                });
+              }
+
+              function setupNote(note) {
+                const env = new P5.Env();
+
+                //env.setADSR(attackTime, decayTime, susPercent, releaseTime);
+                env.setADSR(0.001, 0.2, note.amplitude, note.duration);
+                //setRange(attackLevel,releaseLevel)
+                env.setRange(note.amplitude, 0);
+
+                note.sample.amp(env);
+              }
+            </code></pre>
+          </section>
+          <section>
+            <img data-src="./static/adsr.jpg" class="stretch"/>
+          </section>
+          <aside class="notes">
+            This function abstracts all the hard work of playing an arbitrary note: first, we get the sample nearest to the desired note, and calculate the pitch adjustment. Then we use the P5 library to load the sample into the user’s browser. The loadSound function accepts a callback function, which we use to set up some more details about the note: we make sure we’re not trying to play the note for longer than the sample’s duration, and then we create two more P5 objects and attach them to the note. The Envelope (P5.Env) makes it easier to define the note’s volume function, and the Amplitude (P5.Amplitude) lets us read the volume at any point during the sample’s playback (there’s not a one-to-one correspondence between the two because of the natural variations in the samples from being played by a human).
+          </aside>
+        </section>
+        <section>
+          <pre><code data-trim class="javascript" contenteditable="true">
+            function playNote(note,delay) {
+              note.sample.play(delay,note.pitchAdjust);
+              note.envelope.play(note.sample);
+            }
+          </code></pre>
+          <aside class="notes">
+            Now playing the note is as simple as setting a few settings on the note’s envelope, then starting the sample and the envelope.
+          </aside>
+        </section>
+        <section>
+          <section>
+            <iframe data-src="http://localhost:8080/audiotest.html"></iframe>
+            <aside class="notes">
+              To test that everything is working properly, let’s play a scale.
+            </aside>
+          </section>
+          <section>
+            <img data-src="./static/overtones.png" class="stretch"/>
+          </section>
+        </section>
+        <section>
+          <h1>2. Visuals</h1>
+        </section>
+        <section>
+          <div class="livecode stretch no-console">
+            <pre><code data-trim class="javascript" contenteditable="true">function setup() {
+
+}
+
+function draw() {
+  ellipse(50, 50, 80, 80);
+}
+            </code></pre>
+            <pre><code data-trim class="html">
+              <style>canvas {border: 1px solid black;}</style>
+              <script src="./static/p5.js"></script>
+            </code></pre>
+          </div>
+        </section>
+        <section>
+          <h2>Instance Mode</h2>
+          <div class="livecode stretch no-console">
+            <pre><code data-trim class="javascript" contenteditable="true">function sketch(p5) {
+  p5.setup = () => {}
+  p5.draw = () => {
+    p5.ellipse(50, 50, 80, 80);
+  }
+}
+
+new p5(sketch);</code></pre>
+            <pre><code class="html">
+              <style>canvas {border: 1px solid black;}</style>
+              <script src="./static/p5.js"></script>
+            </code></pre>
+          </div>
+        </section>
+        <!-- <section>
+          <h2>Instance Mode Using Modules</h2>
+          <pre><code data-trim class="javascript" contenteditable="true">
+            const P5 = require('p5');
+
+            function sketch(p5) {
+              p5.setup = () => {}
+              p5.draw = () => {
+                p5.ellipse(50, 50, 80, 80);
+              }
+            }
+
+            new P5(sketch);
+          </code></pre>
+        </section> -->
+        <section>
+          <h1>Colors + Shapes</h1>
+          <pre><code data-trim class="javascript" contenteditable="true">
+            p5.fill(r,g,b,[alpha]);
+            p5.fill(#abcdef,[alpha]);
+            p5.stroke('chartreuse');
+
+            p5.colorMode(p5.HSB);
+            p5.stroke(h,s,b,[alpha]);
+
+            p5.noFill();
+            p5.noStroke();
+
+            p5.ellipse(x,y,w,[h]);
+            p5.rect(x,y,w,h);
+            p5.line(x1,y1,x2,y2);
+            p5.triangle(x1,y1,x2,y2,x3,y3);
+          </code></pre>
+        </section>
+        <section>
+          <div class="livecode stretch no-console">
+            <pre><code data-trim class="javascript" contenteditable="true">function sketch(p5) {
+  p5.draw = () => {
+    p5.stroke('black').noFill();
+    p5.ellipse(25,25,40,30);
+    p5.fill('lightblue');
+    p5.rect(10,20,25,20);
+    p5.stroke('red');
+    p5.line(5,10,40,45);
+  }
+}
+
+new p5(sketch);
+            </code></pre>
+            <pre><code class="html">
+              <style>canvas {border: 1px solid black;}</style>
+              <script src="./static/p5.js"></script>
+            </code></pre>
+          </div>
+        </section>
+        <section>
+          <section>
+            <h1>Interaction</h1>
+            <pre><code data-trim class="javascript" contenteditable="true">
+              p5.keyPressed = () => {
+                //do something
+              }
+              p5.mouseClicked = () => {
+                //do something
+              }
+            </code></pre>
+          </section>
+          <section>
+            <iframe data-src="http://localhost:8080/sound/" class="stretch"></iframe>
+          </section>
+        </section>
+        <section>
+          <div class="livecode stretch no-console">
+            <pre><code data-trim class="javascript" contenteditable="true">function sketch(p5) {
+  let hue = 0;
+  p5.setup = () => {p5.colorMode(p5.HSB);}
+  p5.draw = () => {
+    p5.fill(hue, 100, 100);
+    p5.rect(10, 10, 80, 80);
+  }
+  p5.mouseClicked = () => {
+    hue = p5.random() * 360;
+  }
+}
+new p5(sketch);</code></pre>
+            <pre><code class="html">
+            <style>canvas {border: 1px solid black;}</style>
+              <script src="./static/p5.js"></script>
+            </code></pre>
+          </div>
+        </section>
+        <section>
+          <h1><code>p5.draw()</code> is a loop!</h1>
+        </section>
+        <section>
+          <div class="livecode stretch no-console">
+            <pre><code data-trim class="javascript" contenteditable="true">function sketch(p5) {
+  let x = 0, y = 0;
+  p5.setup = () => {p5.colorMode(p5.HSB)}
+  p5.draw = () => {
+    p5.background(255);
+    x += 1.11;
+    y += 1;
+    p5.fill(x % 360,100,100);
+    p5.ellipse(x % 100,y % 100,20);
+  }
+}
+new p5(sketch);</code></pre>
+            <pre><code class="html">
+              <style>canvas {border: 1px solid black;}</style>
+              <script src="./static/p5.js"></script>
+            </code></pre>
+          </div>
+        </section>
+        <section>
+          <img data-src="./static/transparency.png" class="stretch" style="background:white;"/>
+        </section>
+        <section>
+          <iframe data-src="http://localhost:8080/drawNotes.html" class="stretch"></iframe>
+        </section>
+        <section>
+          <pre><code data-trim class="javascript stretch">
+            let instruments = utils.shuffle(Object.keys(library.samples));
+
+            const pointSheet = {};
+            pointSheet[instruments[0]] = {point: {x:86.76,y:45.68,size:1}};
+            pointSheet[instruments[1]] = {point: {x:57.35,y:84.29,size:1}};
+            //...
+            pointSheet[instruments[13]] = {point: {x:84.97,y:76.45,size:4}};
+            pointSheet[instruments[14]] = {point: {x:68.88,y:29.55,size:4}};
+
+            const lineSheets = [
+            [
+              [{x:0,y:37.23},{x:100,y:51.53}],
+              [{x:43.06,y:0},{x:37.75,y:100}],
+              [{x:66.34,y:0},{x:44.27,y:100}],
+              [{x:100,y:17.62},{x:36.40,y:100}],
+              [{x:20.62,y:100},{x:0,y:55.72}]
+            ],[
+              [{x:71.43,y:0},{x:0,y:56.87}],
+              [{x:0,y:29.18},{x:45.75,y:100}],
+              [{x:0,y:54.32},{x:100,y:86.49}],
+              [{x:0,y:63.56},{x:100,y:35.00}],
+              [{x:97.84,y:0},{x:65.39,y:100}]
+            ],
+            //etc.
+          </code></pre>
+        </section>
+            <section>
+               <pre><code data-trim contenteditable class="javascript stretch">
+                  function getAttributeLines(point,sheet) {
+                    utils.shuffle(sheet);
+
+                    return {
+                      lowestFreq: getLineDetails(point,sheet[0]),
+                      overtone: getLineDetails(point,sheet[1]),
+                      amplitude: getLineDetails(point,sheet[2]),
+                      duration: getLineDetails(point,sheet[3]),
+                      occurence: getLineDetails(point,sheet[4])
+                    };
+                  }
+
+                  function getLineDetails(point,lineEnds) {
+                    const [end1,end2] = lineEnds.slice();
+                    const line = geom.getLine(end1,end2);
+
+                    return {
+                      end1,
+                      end2,
+                      distance: geom.distanceFrom(point,line),
+                      intersection: geom.perpindicularIntersectionPoint(point,line)
+                    };
+                  }
+               </code></pre>
+            </section>
+            <section>
+              <iframe data-src="https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line" class="stretch"></iframe>
+            </section>
+            <section>
+              <pre><code data-trim contenteditable class="javascript stretch">
+                //returned object forms the basis of the `note`
+                function getNoteAttributes(instrument,point,sheet) {
+                  const lines = getAttributeLines(point,sheet);
+
+                  const [low,high] = audioUtils.getSampleRange(instrument);
+                  const noteVal =
+                    low + (high - low) * lines.lowestFreq.distance / 100;
+                  const lowestFreq = audioUtils.valueToNote(noteVal);
+
+                  return {
+                    lines, //contains geometric info; other properties contain all the note info
+                    pitch: lowestFreq.pitch,
+                    octave: lowestFreq.octave,
+                    delay: lines.occurence.distance,
+                    amplitude: lines.amplitude.distance / 100,
+                    duration: lines.duration.distance / 10
+                  };
+                }
+              </code></pre>
+            </section>
+        <!-- <section>
+          <pre><code data-trim class="javascript stretch">
+            function normalize(v) {
+              const dim = Math.min(p5.windowWidth / 2,p5.windowHeight);
+              return p5.map(v,0,100,0,dim);
+            }
+
+            function drawLine(p1,p2) {
+              p5.line(normalize(p1.x),normalize(p1.y),normalize(p2.x),normalize(p2.y));
+            }
+
+            function drawAttributeLines(note) {
+              Object.keys(note.lines).forEach(attributeLine => {
+                const line = note.lines[attributeLine]
+                drawLine(line.end1,line.end2);
+              });
+            }
+
+            function drawNote(instrument,note) {
+              Object.keys(note.lines).forEach(attributeLine => {
+                p5.stroke(colors[attributeLine]);
+                p5.strokeWeight(note.amplitude * 20);
+                drawLine(score[instrument].point,note.lines[attributeLine].intersection);
+              });
+            }
+          </code></pre>
+        </section> -->
+        <section>
+          <pre><code data-trim class="javascript stretch">
+            p5.draw = () => {
+              p5.background(colors.background);
+
+              let delay = 0;
+              Object.keys(score).forEach(inst => {
+                const point = score[inst].point;
+                p5.strokeWeight(point.size * 4);
+                //draw a circle for the instrument:
+                p5.ellipse(normalize(point.x),normalize(point.y),point.size * 4);
+
+                score[instrument].notes.forEach(note => {
+                  //draw the colored lines to visualize the note:
+                  drawNote(instrument,note);
+                  //draw the attribute lines:
+                  drawAttributeLines(note);
+
+                  //play the note:
+                  audio.playNote(note,delay);
+                  delay += note.duration;
+                });
+              }
+            });
+
+          </code></pre>
+        </section>
+        <section>
+          <iframe data-src="http://localhost:8080/drawNotes.html" class="stretch"></iframe>
+        </section>
+        <section>
+          <h1>3. Animate the piece</h1>
+        </section>
+        <!-- <section>
+          <iframe data-src="http://localhost:8080/repeat.html" class="stretch"></iframe>
+        </section> -->
+        <section>
+          <pre><code data-trim class="javascript">
+            function setupNote(note) {
+              const env = new P5.Env();
+
+              //env.setADSR(attackTime, decayTime, susPercent, releaseTime);
+              env.setADSR(0.001, 0.2, note.amplitude, note.duration);
+              //setRange(attackLevel,releaseLevel)
+              env.setRange(note.amplitude, 0);
+
+              note.sample.amp(env);
+
+              //an addition:
+              const amp = new P5.Amplitude();
+              amp.setInput(note.sample);
+              note.curAmplitude = amp;
+            }
+          </code></pre>
+        </section>
+            <section>
+          <section>
+            <pre><code class="javascript stretch " data-trim>
+              function drawNote(instrument,note) {
+                Object.keys(note.lines).forEach(noteAttribute => {
+                  //vary the weight based on the sample's amplitude
+                  p5.strokeWeight(note.curAmplitude.getLevel() * 100);
+                  //color it accordint to its pitch
+                  p5.stroke(getNoteHueValue(note),100,100,note.amplitude);
+
+                  drawLine(score[instrument].point,note.lines[noteAttribute].intersection);
+                });
+              }
+
+              function getNoteHueValue(note) {
+                return 371 / (1 + Math.pow(Math.E,(56 - audioUtils.noteToValue(note)) / 10)) - 4;
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h2>Bonus Math Detour: Sigmoid Curve</h2>
+            <img class="stretch" src="./static/line.png"/>
+          </section>
+          <section>
+            <h2>Bonus Math Detour: Sigmoid Curve</h2>
+            <img class="stretch" src="./static/sigmoid.png"/>
+          </section>
+        </section>
+        <!-- <section>
+          <pre><code class="javascript stretch" data-trim>
+            function playNote(note,delay,rate) {
+              note.sample.play(delay,(rate || 1) * note.pitchAdjust);
+              note.envelope.play(note.sample);
+
+              //new:
+              setTimeout(
+                () => {note.isActive = true;},
+                delay * 1000
+              );
+
+              setTimeout(
+                () => {note.isActive = false;},
+                (delay + note.duration) * 1000
+              );
+            }
+          </code></pre>
+        </section> -->
+        <section>
+          <pre><code data-trim class="javascript">
+            function drawLiveScore() {
+              Object.keys(score).forEach(instrument => {
+                score[instrument].notes.forEach(note => {
+                  if (note.isActive) {
+                    drawNote(instrument,note);
+                  }
+                });
+              });
+            }
+          </code></pre>
+        </section>
+        <section>
+          <h1>Phrase, Part, Score</h1>
+        </section>
+        <section>
+          <pre><code data-trim class="javascript">
+            function getPhrase(instrument,note,pattern) {
+              return new P5.Phrase(
+                instrument + note.pitch + note.octave
+                (time,rate) => {
+                  playNote(note,time,rate);
+                },
+                pattern
+              );
+            }
+          </code></pre>
+        </section>
+        <section>
+          <section>
+            <pre class="stretch"><code data-trim class="javascript">
+              function playScore(p5,score) {
+                const playPart = new P5.Part(16);
+                playPart.loop().setBPM(10);
+
+                Object.keys(score).forEach(instrument => {
+                  score[instrument].notes.forEach(note => {
+                    setTimeout(() => {
+                        playPart.addPhrase(getPhrase(instrument,note,getPattern()));
+                      }, note.delay * 1000
+                    );
+                  });
+                });
+
+                playPart.start();
+              }
+
+              const zeroPattern = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+              let noteOffset = 0;
+              function getPattern() {
+                const pattern = zeroPattern.slice();
+                pattern[noteOffset++ % 16] = 1;
+              }
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <iframe data-src="http://localhost:8080" class="stretch"></iframe>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script type="text/javascript">
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        // width: "90%",
+        // height: "90%",
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/livecode/livecode.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>

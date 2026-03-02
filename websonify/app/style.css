@@ -1,0 +1,41 @@
+#allSynths {
+  white-space: nowrap;
+}
+
+.synthInfo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.synthTitle {
+  text-align: center;
+  font-size: 250%;
+}
+
+table {
+  border-collapse: collapse;  
+}
+
+td {
+ border: 1px solid black; 
+}
+
+.hidden {
+    animation: fadeOut 2s;
+}
+
+@keyframes fadeOut {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.shown {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0%     { opacity: 0; }
+    50%    { opacity: 0; }
+    100%   { opacity: 1; }
+}
