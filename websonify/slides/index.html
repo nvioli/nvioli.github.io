@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>WebSonify</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/webSonify.css">
@@ -24,47 +24,69 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section><!-- Title -->
+        <section>
           <h1>WebSonify</h1>
           <h3>Nick Violi</h3>
           <br/><br/>
           <h5>
             <a href="https://twitter.com/nvioli">@nvioli</a>
             <span>&nbsp;/&nbsp;</span>
-            <a href="https://web-sonify.glitch.me/">https://web-sonify.glitch.me/</a></h5>
+            <a href="https://nvioli.github.io/websonify/app/">https://nvioli.github.io/websonify/app/</a>
+          </h5>
+          <aside class="notes">
+            <p>
+              I’m a web developer, and the company I work for, GlobalGiving, is half nonprofit and half tech company. We have a website that serves many different audiences, and of course we want to know who’s using it and how they’re using it, at any given point in time.
+            </p>
+          </aside>
         </section>
-        <section data-background-video="./static/ga_dashboard.mov" data-background-size="contain" data-background-video-loop="true" data-autoplay></section>
-        <!-- <section data-background-iframe="https://analytics.google.com/analytics/web/#/realtime/rt-overview/a1836649w3240076p3315059/" data-background-interactive></section> -->
+        <section data-background-image="./static/ga-dashboard.png" data-background-size="contain">
+          <aside class="notes">
+            <p>
+              Like many of you, one of the tools we use to measure our traffic is Google Analytics, and we can use a dashboard like this to see information about how many people are using our site and what they’re doing there in real time.
+            </p>
+            <p>
+              As great as information visualization is, I think there are a few drawbacks to this approach for interpreting live data. The most important one is that because sight is our most vivid sense -- which is the very reason that information visualization is such a great tool for displaying complex data -- we’re really only able to process one thing at a time; if I want to understand (in real time) how my website’s usage is changing over the course of the day, I pretty much have to watch this dashboard constantly for eight hours.
+            </p>
+            <p>
+              That’s what I’m trying to avoid; the motivation for this project was to see whether I could create an auditory interface to my site’s traffic data, and to learn how well it would function in communicating the data to me.
+            </p>
+          </aside>
+        </section>
         <section>
+          <blockquote>
+            Biologically, we do different things with our ears than our eyes, so when we come to understanding structure in the world, [...] we can use our ears to understand something about it which is different to what we can understand with our eyes.
+          </blockquote>
+          <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-David Worrall</div>
+          <br />
           <blockquote>
             If the visual sense is already highly loaded, sonification can be a suited alternative to provide additional information
           </blockquote>
           <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Thomas Hermann</div>
+          <aside class="notes">
+            <p>
+              Of course there’s a well-established field of research into this topic, called sonification, and I’ll admit that I’m new to it, and let these quotes from some experts put this project into that context.
+            </p>
+          </aside>
         </section>
-        <section data-background-image="./static/metal_detector.JPG" data-background-size="contain" style="min-height: 100% !important;top:0;">
-          <audio data-autoplay src="./static/metal_detector.mp3"></audio>
-          <div style="position: absolute;bottom: 30px;background: #e1dfe2;font-size:70%;">
-            https://www.macdill.af.mil/News/Photos/igphoto/2001848023/
-          </div>
-        </section>
-        <section data-background-image="./static/geiger_counter.jpg" data-background-size="contain" style="min-height: 100% !important;top:0;">
-          <audio data-autoplay src="./static/geiger_counter.mp3"></audio>
-          <div style="position: absolute;bottom: 30px;background: #e1dfe2;font-size:70%;">
-            https://www.flickr.com/photos/mightyohm/6882732611
-          </div>
-        </section>
-        <section>
-          Other Sonification Example?
-        </section>
-        <section>
-          <section>
-            <h1>Live Demo</h1>
-          </section>
-          <!-- DEMO -->
-          <!-- <section id="liveDemo" data-background-iframe="https://web-sonify.glitch.me/" data-background-interactive>
-            TODO local server!
-          </section> -->
-          <!-- END DEMO -->
+        <section data-background-iframe="https://nvioli.github.io/websonify/app/" data-background-interactive id="liveDemo">
+          <!-- <h1>Live Demo</h1> -->
+          <aside class="notes">
+            <p>
+              Here’s the current state of the project. For the first version, it’s very simple: the only data being encoded is simply the number of visitors on the site: each note you’re hearing right now represents one person currently browsing the site. The visitors are separated into three groups by the Google Analytics goals that they are meeting, and each group is assigned an instrument.
+            </p>
+            <p>
+              The tool is set up to monitor GlobalGiving’s donor activity, though in a few minutes, anyone could connect it to their own Google Analytics account and sonify the data that’s being generated by their site, in real time. Currently, the cello represents the visitors furthest away from completing their donation, this could represent our nonprofit partners working in the backend, or anyone looking at the informational parts of our site. The violins represent visitors who are viewing one of our project pages. (If we were a retail site, the analogy is that these pages would be like the products we were selling, so these people represent potential donors, or browsing shoppers, who have not yet started the checkout process.) And finally the flute represents visitors in some part of the checkout process: they’re either on the cart and billing page, where they'll hopefully check out soon, or the thank-you page meaning they've just donated. Since these visitors are the most important to me, they get an additional auditory flourish called a musical cadence.
+            </p>
+            <p>
+              The goal classifications, as well as the instrument representing them are editable by the user, so that the tool can be modified to suit the goals and preferences of different people within the organization.
+            </p>
+            <p>
+              The result is an procedurally generated song, that’s theoretically infinite, changing over time to mirror the changes in the site’s traffic patterns.
+            </p>
+            <p>
+              One of my goals with this project was to create something that can exist around you, ambiently informing you about something you care about, while not monopolizing your attention. I always envisioned it as being played at a volume just around the level of cognition; I think it would be interesting to play very quietly in a lobby, lounge, or common area of the company whose data it’s representing, where it would blend into the architecture and become something of a data-enabled soundtrack.
+            </p>
+          </aside>
         </section>
         <section>
           <pre>
@@ -90,6 +112,17 @@ function liveQuery() {
 }
             </code>
           </pre>
+          <aside class="notes">
+            <p>
+              Let’s talk now about some of the implementation details, and I think I’ll keep that playing unless you're having trouble hearing me. The scheduling algorithm starts with a call to the Google Analytics Real Time API. We use their javascript library to pass the site’s id, and specify that we want the metric of “active users” grouped by the dimension of “goal ID”.
+            </p>
+            <p>
+              The response that’s returned is around three quarters of a kilobyte, and once the instruments are initially loaded, that’s all the network traffic needed, less than a kilobyte per minute. I don’t have to tell you all this, but it feels so powerful to me to have this entire library running on the client. It’s really amazing what we can accomplish with minimal server access, as compared to the more traditional ways to play sound or music for a user: streaming the entire sound file.
+            </p>
+            <p>
+              The important part of the response is reproduced here: an array of pairs which relate the goal ID to the number of users meeting that goal. First we run a short function to group the goals according to the user’s selections into the three buckets represented by the three instruments, then pass the aggregated totals to the scheduling function. Finally we set a timeout to recurse after another minute.
+            </p>
+          </aside>
         </section>
         <section>
           <style>
@@ -128,6 +161,11 @@ function liveQuery() {
             },60 * 1000/92);
           </script>
           <div id="play92notes"></div>
+          <aside class="notes">
+            <p>
+              So now we know we need to schedule the cello to play 92 notes; we get to the heart of the whole program. The naive solution represented here would be just to play 92 evenly spaced notes, (that’s not what you’re hearing now; but we can all envision a cello playing the same note about every ⅔ of a second. The problem for me is that this wouldn’t create a very interesting or dynamic piece, and I think it would also be a little too stable: it would be hard to hear changes of, say 10%, from minute to minute, which might be important to us.
+            </p>
+          </aside>
         </section>
         <section data-transition="none-out">
           <pre>
@@ -151,6 +189,11 @@ function liveQuery() {
 
 
           </pre>
+          <aside class="notes">
+            <p>
+              Instead, after some trial and error, the method I created to schedule the notes is based on the binary encoding of the number of notes to be played. Quick math refresher about how binary numbers work: instead of a ones place, a tens place, a hundreds place like we’re used to in decimal, from right to left, binary has a ones place, a twos place, a fours place and so on. It's the same idea, just using powers of two instead of powers of ten.
+            </p>
+          </aside>
         </section>
         <section data-transition="none-in">
           <pre>
@@ -170,38 +213,120 @@ function liveQuery() {
                     |   ⤷-------------------- 2^5 = 32 * 1 =  0
                     |
                     ⤷------------------------ 2^6 = 64 * 1 = 64
-                                                             ____________________
+                                                             ___
 
-                                                             4 + 8 + 16 + 64 = 92
+                                                              92
           </pre>
+          <aside class="notes">
+            <p>
+              For instance here’s the binary representation of 92: 1011100, meaning that another way to represent 92 is 64 + 16 + 8 + 4. So instead of telling the instrument to play 92 evenly spaced notes, we can tell it to play one note 64 times in a minute, a second note it can play 16 times, a third note 8 times, and a final note to play just four times in a minute, and we’ll end up having played 92 notes, as we wanted.
+            </p>
+          </aside>
         </section>
         <section>
           <img src="./static/92notes_noOffset.png" />
           <img src="./static/92notes.png" class="fragment"/>
+          <aside class="notes">
+            <p>
+              Here’s what that looks like. The song is written at 64bpm, so there are 16 four-beat measures every minute, and I should note that in all the visualizations we’re only seeing four measures (only because that's what seemed to fit comfortably on the screen), so this is 15 seconds of data if you want to think about it that way. The green row at the top, then, is playing eighth notes repeating on the quarter note -- which works out to 64 notes in a minute, the purplish one is playing a half note every measure, so 16 notes in a minute, the green one is playing a whole note every other measures, so eight notes, and the pink one is playing a whole note every four measures, or just four notes in the minute.
+            </p>
+            <p>
+              Now that we have a series of loops which will generate the correct number of notes, we make one adjustment: if we started all the loops at the same time, each minute would start with one note from each loop played at the same time. You can see they’re all stacked here at the left. To avoid this unpleasant chord (which also makes it hard to interpret the data-- it’s hard for your ear to discern whether you’re hearing three notes, or five notes, or more playing all at the same time). To deal with this issue, we introduce an offset variable which offsets the start of each loop by some amount related to the length of the note being played.
+            </p>
+            <p>
+              The idea to use the binary encoding seems to produce a good level of variability. In this case, all numbers between 64 and 127 will have those same quarter notes, but different numbers within that range will create different combinations of the other loops, so it’s a good balance between stability and variation.
+            </p>
+          </aside>
         </section>
         <section>
-          Future Work
+          <h1><a href="#liveDemo">Back to Demo</a></h1>
+          <aside class="notes">
+            <p>
+              I’m going to switch back to the demo to point out that, because the numbers I’ve been using so far have been relatively small, I added this function to change the number of visitors represented, so the cadence can be sped up or slowed down, depending on the scale of the site’s traffic. If your site has 1000 unique visitors at any given point in time, or 10000, we can scale down the number of notes played by some factor.
+            </p>
+            <p>
+              I’ll use this to tell a quick story: earlier in the year when I was working on this, some days it would be working and some it wouldn’t; I was refining the algorithm. I was listening to it at work, as I often did, to get a sense of how it was working, and I had forgotten that we sent a large corporate gift card email and from one minute to the next, when the traffic went from this … (it’s a relatively slow time of the year right now), and then in the next minute when the emails went out and people started opening them and clicking through to our site, and it started sounding more like this (switch to 5 notes per visitor) … That’s when I knew I was onto something and started feeling good about this project because I was just passively listening to the traffic on my site and my ears told me something about the traffic that I didn’t know before.
+            </p>
+
+          </aside>
+        </section>
+        <section>
+          <h1>Future Work</h1>
+          <aside class="notes">
+            <p>
+              I’ll switch back to the presentation now and move to the final section where I’d like to discuss some of the future work that I’m interested in exploring in this project.
+            </p>
+
+            <p>
+              The implementation I’ve outlined so far is pretty simplistic, as it only encodes one dimension of data. There’s obviously much more data available: we could encode visitors’ geographic location, age, whether they’re a new or returning user, the amount of their donation, anything else that Google Analytics can provide us that would be interesting to us. To accommodate these additional dimensions of data, we certainly have many more attributes of the song that could be used, such as they key, note selection, note duration, note volume and envelope, to say nothing of the possibilities for adding filters and effects which could convey meaning. All of those elements are chosen somewhat idiosyncratically, and none of them have any representation at the data level.
+            </p>
+
+            <p>
+              However I’m wary of trying to encode too much data, as I might get to the point where understanding the represented data sonically requires as much attention and focus as the visualizations that I am trying to replace.
+            </p>
+          </aside>
         </section>
         <section>
           <blockquote>
             Ambient music must be able to accommodate many levels of listening attention without enforcing one in particular; it must be as ignorable as it is interesting.
           </blockquote>
           <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Brian Eno</div>
+          <aside class="notes">
+            <p>
+              To give myself some inspiration and guidance in how to achieve the correct balance between simplicity and data-richness, I think you can’t use the words “ambient” and “infinite song” in a presentation and not include a Brian Eno quote, so I’ll include my favorite one here, to remind myself to try to add levels of listening attention without enforcing any of them.
+            </p>
+          </aside>
         </section>
         <section>
           <blockquote>
             [Y]ou only need to have three legs on a table. After two, three meant many, and that was it, you don't have to go any further than that: the three components of songwriting, the three chords of rock 'n' roll or the blues--that always seemed to be the number.
           </blockquote>
           <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Jack White</div>
+          <aside class="notes">
+            <p>
+              The other possible avenue for extending the current implementation is by adding additional instruments. There’s no special reason I’ve limited it to three, besides perhaps to honor Jack White’s fascination with the number three. But again, the more voices I add to the ensemble, the more difficult it will be for our ears to understand the nuances of the visitor patterns being represented.
+            </p>
+            <p>
+              For both possibilities, I’d be interested in experimenting with what limitations and possibilities exist.
+            </p>
+            <p>
+              Finally, it might also be interesting to give more creative control of the song to the user, so that more surprising and unexpected variations could be uncovered. Since the notes’ pitches and durations do not currently convey any meaning, these could be made editable in the UI.
+            </p>
+          </aside>
+        </section>
+        <section>
+          <h2>WebSonify...</h2>
+          <ul style="max-width:1024px;">
+            <li>Is an infinite, procedurally-generated song, written in real time in response to live, streaming data.</li>
+            <li>Noticeably changes depending on current traffic patterns.</li>
+            <li>Sounds engaging and interesting enough to listen to for long time periods (though I'm biased)</li>
+            <li>Contains a pleasing balance between stability and variation; shows progression without ever changing dramatically.</li>
+          </ul>
+          <aside class="notes">
+            <p>
+              As I wrap up, I want to recap some of the successes I feel this project has achieved. WebSonify is an infinite, procedurally-generated song, written in real time in response to live, streaming data.
+              By listening to it at different times of the day and week, with different traffic patterns, the ability to represent these unique patterns sonically is obvious.
+              I’m biased of course in considering the aesthetics of the song, but I find it engaging and interesting enough to merit continued listening over many hours.
+              The method of using binary representation seems to create a good balance between stability and variation; each minute’s data is different from the last, so the song shows some progression.
+            </p>
+          </aside>
         </section>
         <section>
           <blockquote>
             Music makes you feel something [...] I don't remember the last time I was moved by looking at a line chart. I think it's the right medium for human data, a medium that has this very primal, visceral quality to it.
           </blockquote>
           <div style="text-align: right; width: 70%; margin: 20px auto; padding: 5px;">-Brian Foo, Data-Driven DJ</div>
+          <aside class="notes">
+            <p>
+              The last thing I’ll leave you with, besides this great quote about a very like-minded project, is the power of this tool as a motivational force: we all have times when we’re less than excited to be at work, but hearing a note representing each individual user on my company’s website is really satisfying, and being able to do that without interrupting my job function is even more valuable. It’s a much more empathetic experience than just seeing a number on a dashboard, and it functions as a constant reminder of the real people my work is supporting and enabling.
+            </p>
+          </aside>
         </section>
         <section>
           <h1>Thanks.</h1>
+          Built with <a href="https://tonejs.github.io/">tone.js</a>, <a href="https://svelte.technology/">svelte</a>, <a href="https://glitch.com/">glitch.com</a>.
+          <br />
+          Slides with <a href="https://github.com/hakimel/reveal.js">reveal.js</a>.
         </section>
       </div>
     </div>
@@ -221,7 +346,8 @@ function liveQuery() {
           { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
         ],
         width:"100%",
-        height:"100%"
+        height:"100%",
+        showNotes: true
       });
     </script>
   </body>

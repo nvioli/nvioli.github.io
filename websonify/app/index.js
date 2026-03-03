@@ -25562,564 +25562,564 @@ function refreshLoopState(grp) {
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
   '1st Violins': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-a%235.mp3',
-    'A#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-a%236.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-c%236.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-e6.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-g5.mp3',
-    'G6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/1st-violins-sus-g6.mp3'
+    'A#3': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-a%234.wav',
+    'A#5': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-a%235.wav',
+    'A#6': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-a%236.wav',
+    'C#4': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-c%234.wav',
+    'C#5': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-c%235.wav',
+    'C#6': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-c%236.wav',
+    'E4': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-e4.wav',
+    'E5': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-e5.wav',
+    'E6': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-e6.wav',
+    'G3': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-g3.wav',
+    'G4': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-g4.wav',
+    'G5': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-g5.wav',
+    'G6': '../../variations/app/Samples/1st%20Violins/1st-violins-sus-g6.wav'
   },
   '2nd Violins': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-a%235.mp3',
-    'A#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-a%236.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-c%236.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-e6.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-g5.mp3',
-    'G6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/2nd-violins-sus-g6.mp3'
+    'A#3': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-a%234.wav',
+    'A#5': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-a%235.wav',
+    'A#6': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-a%236.wav',
+    'C#4': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-c%234.wav',
+    'C#5': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-c%235.wav',
+    'C#6': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-c%236.wav',
+    'E4': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-e4.wav',
+    'E5': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-e5.wav',
+    'E6': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-e6.wav',
+    'G3': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-g3.wav',
+    'G4': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-g4.wav',
+    'G5': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-g5.wav',
+    'G6': '../../variations/app/Samples/2nd%20Violins/2nd-violins-sus-g6.wav'
   },
   'Alto Flute': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-a%235.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-c%236.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-e6.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-g5.mp3',
-    'G6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/alto_flute-g6.mp3'
+    'A#3': '../../variations/app/Samples/Alto%20Flute/alto_flute-a%233.wav',
+    'A#4': '../../variations/app/Samples/Alto%20Flute/alto_flute-a%234.wav',
+    'A#5': '../../variations/app/Samples/Alto%20Flute/alto_flute-a%235.wav',
+    'C#4': '../../variations/app/Samples/Alto%20Flute/alto_flute-c%234.wav',
+    'C#5': '../../variations/app/Samples/Alto%20Flute/alto_flute-c%235.wav',
+    'C#6': '../../variations/app/Samples/Alto%20Flute/alto_flute-c%236.wav',
+    'E4': '../../variations/app/Samples/Alto%20Flute/alto_flute-e4.wav',
+    'E5': '../../variations/app/Samples/Alto%20Flute/alto_flute-e5.wav',
+    'E6': '../../variations/app/Samples/Alto%20Flute/alto_flute-e6.wav',
+    'G3': '../../variations/app/Samples/Alto%20Flute/alto_flute-g3.wav',
+    'G4': '../../variations/app/Samples/Alto%20Flute/alto_flute-g4.wav',
+    'G5': '../../variations/app/Samples/Alto%20Flute/alto_flute-g5.wav',
+    'G6': '../../variations/app/Samples/Alto%20Flute/alto_flute-g6.wav'
   },
   'Bass Clarinet': {
-    'B2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-b2.mp3',
-    'B3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-b3.mp3',
-    'B4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-b4.mp3',
-    'D2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-d2.mp3',
-    'D3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-d3.mp3',
-    'D4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-d4.mp3',
-    'D5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-d5.mp3',
-    'F2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-f2.mp3',
-    'F3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-f3.mp3',
-    'F4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-f4.mp3',
-    'G#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-g%232.mp3',
-    'G#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-g%233.mp3',
-    'G#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_clarinet-g%234.mp3'
+    'B2': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-b2.wav',
+    'B3': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-b3.wav',
+    'B4': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-b4.wav',
+    'D2': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-d2.wav',
+    'D3': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-d3.wav',
+    'D4': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-d4.wav',
+    'D5': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-d5.wav',
+    'F2': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-f2.wav',
+    'F3': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-f3.wav',
+    'F4': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-f4.wav',
+    'G#2': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-g%232.wav',
+    'G#3': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-g%233.wav',
+    'G#4': '../../variations/app/Samples/Bass%20Clarinet/bass_clarinet-g%234.wav'
   },
   'Bass Trombone': {
-    'A#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-a%231.mp3',
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-a%233.mp3',
-    'C#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-c%232.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-c%234.mp3',
-    'E1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-e1.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-e4.mp3',
-    'G1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-g1.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bass_trombone-g4.mp3'
+    'A#1': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-a%231.wav',
+    'A#2': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-a%232.wav',
+    'A#3': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-a%233.wav',
+    'C#2': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-c%232.wav',
+    'C#3': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-c%233.wav',
+    'C#4': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-c%234.wav',
+    'E1': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-e1.wav',
+    'E2': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-e2.wav',
+    'E3': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-e3.wav',
+    'E4': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-e4.wav',
+    'G1': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-g1.wav',
+    'G2': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-g2.wav',
+    'G3': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-g3.wav',
+    'G4': '../../variations/app/Samples/Bass%20Trombone/bass_trombone-g4.wav'
   },
   'Basses': {
-    'A1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-a1.mp3',
-    'A2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-a2.mp3',
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-a3.mp3',
-    'C1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-c1.mp3',
-    'C2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-c2.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-c4.mp3',
-    'D#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-d%231.mp3',
-    'D#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-d%232.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-d%233.mp3',
-    'F#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-f%231.mp3',
-    'F#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-f%232.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/basses-sus-f%233.mp3'
+    'A1': '../../variations/app/Samples/Basses/basses-sus-a1.wav',
+    'A2': '../../variations/app/Samples/Basses/basses-sus-a2.wav',
+    'A3': '../../variations/app/Samples/Basses/basses-sus-a3.wav',
+    'C1': '../../variations/app/Samples/Basses/basses-sus-c1.wav',
+    'C2': '../../variations/app/Samples/Basses/basses-sus-c2.wav',
+    'C3': '../../variations/app/Samples/Basses/basses-sus-c3.wav',
+    'C4': '../../variations/app/Samples/Basses/basses-sus-c4.wav',
+    'D#1': '../../variations/app/Samples/Basses/basses-sus-d%231.wav',
+    'D#2': '../../variations/app/Samples/Basses/basses-sus-d%232.wav',
+    'D#3': '../../variations/app/Samples/Basses/basses-sus-d%233.wav',
+    'F#1': '../../variations/app/Samples/Basses/basses-sus-f%231.wav',
+    'F#2': '../../variations/app/Samples/Basses/basses-sus-f%232.wav',
+    'F#3': '../../variations/app/Samples/Basses/basses-sus-f%233.wav'
   },
   'Bassoon': {
-    'A#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-a%231.mp3',
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-a%234.mp3',
-    'C#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-c%232.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-c%235.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-e4.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoon-g4.mp3'
+    'A#1': '../../variations/app/Samples/Bassoon/bassoon-a%231.wav',
+    'A#2': '../../variations/app/Samples/Bassoon/bassoon-a%232.wav',
+    'A#3': '../../variations/app/Samples/Bassoon/bassoon-a%233.wav',
+    'A#4': '../../variations/app/Samples/Bassoon/bassoon-a%234.wav',
+    'C#2': '../../variations/app/Samples/Bassoon/bassoon-c%232.wav',
+    'C#3': '../../variations/app/Samples/Bassoon/bassoon-c%233.wav',
+    'C#4': '../../variations/app/Samples/Bassoon/bassoon-c%234.wav',
+    'C#5': '../../variations/app/Samples/Bassoon/bassoon-c%235.wav',
+    'E2': '../../variations/app/Samples/Bassoon/bassoon-e2.wav',
+    'E3': '../../variations/app/Samples/Bassoon/bassoon-e3.wav',
+    'E4': '../../variations/app/Samples/Bassoon/bassoon-e4.wav',
+    'G2': '../../variations/app/Samples/Bassoon/bassoon-g2.wav',
+    'G3': '../../variations/app/Samples/Bassoon/bassoon-g3.wav',
+    'G4': '../../variations/app/Samples/Bassoon/bassoon-g4.wav'
   },
   'Bassoons': {
-    'A#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-a%231.mp3',
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-a%234.mp3',
-    'C#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-c%232.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-c%235.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-e5.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/bassoons-sus-g4.mp3'
+    'A#1': '../../variations/app/Samples/Bassoons/bassoons-sus-a%231.wav',
+    'A#2': '../../variations/app/Samples/Bassoons/bassoons-sus-a%232.wav',
+    'A#3': '../../variations/app/Samples/Bassoons/bassoons-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/Bassoons/bassoons-sus-a%234.wav',
+    'C#2': '../../variations/app/Samples/Bassoons/bassoons-sus-c%232.wav',
+    'C#3': '../../variations/app/Samples/Bassoons/bassoons-sus-c%233.wav',
+    'C#4': '../../variations/app/Samples/Bassoons/bassoons-sus-c%234.wav',
+    'C#5': '../../variations/app/Samples/Bassoons/bassoons-sus-c%235.wav',
+    'E2': '../../variations/app/Samples/Bassoons/bassoons-sus-e2.wav',
+    'E3': '../../variations/app/Samples/Bassoons/bassoons-sus-e3.wav',
+    'E4': '../../variations/app/Samples/Bassoons/bassoons-sus-e4.wav',
+    'E5': '../../variations/app/Samples/Bassoons/bassoons-sus-e5.wav',
+    'G2': '../../variations/app/Samples/Bassoons/bassoons-sus-g2.wav',
+    'G3': '../../variations/app/Samples/Bassoons/bassoons-sus-g3.wav',
+    'G4': '../../variations/app/Samples/Bassoons/bassoons-sus-g4.wav'
   },
   'Celli': {
-    'A2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-a2.mp3',
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-a4.mp3',
-    'C2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-c2.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-c5.mp3',
-    'D#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-d%232.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-d%234.mp3',
-    'F#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-f%232.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/celli-sus-f%234.mp3'
+    'A2': '../../variations/app/Samples/Celli/celli-sus-a2.wav',
+    'A3': '../../variations/app/Samples/Celli/celli-sus-a3.wav',
+    'A4': '../../variations/app/Samples/Celli/celli-sus-a4.wav',
+    'C2': '../../variations/app/Samples/Celli/celli-sus-c2.wav',
+    'C3': '../../variations/app/Samples/Celli/celli-sus-c3.wav',
+    'C4': '../../variations/app/Samples/Celli/celli-sus-c4.wav',
+    'C5': '../../variations/app/Samples/Celli/celli-sus-c5.wav',
+    'D#2': '../../variations/app/Samples/Celli/celli-sus-d%232.wav',
+    'D#3': '../../variations/app/Samples/Celli/celli-sus-d%233.wav',
+    'D#4': '../../variations/app/Samples/Celli/celli-sus-d%234.wav',
+    'F#2': '../../variations/app/Samples/Celli/celli-sus-f%232.wav',
+    'F#3': '../../variations/app/Samples/Celli/celli-sus-f%233.wav',
+    'F#4': '../../variations/app/Samples/Celli/celli-sus-f%234.wav'
   },
   'Cello': {
-    'A2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-a2.mp3',
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-a5.mp3',
-    'C2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-c2.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-c5.mp3',
-    'D#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-d%232.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-d%235.mp3',
-    'F#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-f%232.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cello-f%235.mp3'
+    'A2': '../../variations/app/Samples/Cello/cello-a2.wav',
+    'A3': '../../variations/app/Samples/Cello/cello-a3.wav',
+    'A4': '../../variations/app/Samples/Cello/cello-a4.wav',
+    'A5': '../../variations/app/Samples/Cello/cello-a5.wav',
+    'C2': '../../variations/app/Samples/Cello/cello-c2.wav',
+    'C3': '../../variations/app/Samples/Cello/cello-c3.wav',
+    'C4': '../../variations/app/Samples/Cello/cello-c4.wav',
+    'C5': '../../variations/app/Samples/Cello/cello-c5.wav',
+    'D#2': '../../variations/app/Samples/Cello/cello-d%232.wav',
+    'D#3': '../../variations/app/Samples/Cello/cello-d%233.wav',
+    'D#4': '../../variations/app/Samples/Cello/cello-d%234.wav',
+    'D#5': '../../variations/app/Samples/Cello/cello-d%235.wav',
+    'F#2': '../../variations/app/Samples/Cello/cello-f%232.wav',
+    'F#3': '../../variations/app/Samples/Cello/cello-f%233.wav',
+    'F#4': '../../variations/app/Samples/Cello/cello-f%234.wav',
+    'F#5': '../../variations/app/Samples/Cello/cello-f%235.wav'
   },
   'Female Chorus': {
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-a%235.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-a5.mp3',
-    'B4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-b4.mp3',
-    'B5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-b5.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-c%235.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-c6.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-d%235.mp3',
-    'D5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-d5.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-e5.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-f%235.mp3',
-    'F5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-f5.mp3',
-    'G#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-g%234.mp3',
-    'G#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-g%235.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-female-g5.mp3'
+    'A#4': '../../variations/app/Samples/Chorus/chorus-female-a%234.wav',
+    'A#5': '../../variations/app/Samples/Chorus/chorus-female-a%235.wav',
+    'A4': '../../variations/app/Samples/Chorus/chorus-female-a4.wav',
+    'A5': '../../variations/app/Samples/Chorus/chorus-female-a5.wav',
+    'B4': '../../variations/app/Samples/Chorus/chorus-female-b4.wav',
+    'B5': '../../variations/app/Samples/Chorus/chorus-female-b5.wav',
+    'C#5': '../../variations/app/Samples/Chorus/chorus-female-c%235.wav',
+    'C5': '../../variations/app/Samples/Chorus/chorus-female-c5.wav',
+    'C6': '../../variations/app/Samples/Chorus/chorus-female-c6.wav',
+    'D#5': '../../variations/app/Samples/Chorus/chorus-female-d%235.wav',
+    'D5': '../../variations/app/Samples/Chorus/chorus-female-d5.wav',
+    'E5': '../../variations/app/Samples/Chorus/chorus-female-e5.wav',
+    'F#5': '../../variations/app/Samples/Chorus/chorus-female-f%235.wav',
+    'F5': '../../variations/app/Samples/Chorus/chorus-female-f5.wav',
+    'G#4': '../../variations/app/Samples/Chorus/chorus-female-g%234.wav',
+    'G#5': '../../variations/app/Samples/Chorus/chorus-female-g%235.wav',
+    'G4': '../../variations/app/Samples/Chorus/chorus-female-g4.wav',
+    'G5': '../../variations/app/Samples/Chorus/chorus-female-g5.wav'
   },
   'Male Chorus': {
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-a%233.mp3',
-    'A2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-a2.mp3',
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-a3.mp3',
-    'B2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-b2.mp3',
-    'B3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-b3.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-c%234.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-c4.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-d%234.mp3',
-    'D3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-d3.mp3',
-    'D4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-d4.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-e4.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-f%234.mp3',
-    'F3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-f3.mp3',
-    'F4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-f4.mp3',
-    'G#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-g%232.mp3',
-    'G#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-g%233.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chorus-male-g3.mp3'
+    'A#2': '../../variations/app/Samples/Chorus/chorus-male-a%232.wav',
+    'A#3': '../../variations/app/Samples/Chorus/chorus-male-a%233.wav',
+    'A2': '../../variations/app/Samples/Chorus/chorus-male-a2.wav',
+    'A3': '../../variations/app/Samples/Chorus/chorus-male-a3.wav',
+    'B2': '../../variations/app/Samples/Chorus/chorus-male-b2.wav',
+    'B3': '../../variations/app/Samples/Chorus/chorus-male-b3.wav',
+    'C#3': '../../variations/app/Samples/Chorus/chorus-male-c%233.wav',
+    'C#4': '../../variations/app/Samples/Chorus/chorus-male-c%234.wav',
+    'C3': '../../variations/app/Samples/Chorus/chorus-male-c3.wav',
+    'C4': '../../variations/app/Samples/Chorus/chorus-male-c4.wav',
+    'D#3': '../../variations/app/Samples/Chorus/chorus-male-d%233.wav',
+    'D#4': '../../variations/app/Samples/Chorus/chorus-male-d%234.wav',
+    'D3': '../../variations/app/Samples/Chorus/chorus-male-d3.wav',
+    'D4': '../../variations/app/Samples/Chorus/chorus-male-d4.wav',
+    'E3': '../../variations/app/Samples/Chorus/chorus-male-e3.wav',
+    'E4': '../../variations/app/Samples/Chorus/chorus-male-e4.wav',
+    'F#3': '../../variations/app/Samples/Chorus/chorus-male-f%233.wav',
+    'F#4': '../../variations/app/Samples/Chorus/chorus-male-f%234.wav',
+    'F3': '../../variations/app/Samples/Chorus/chorus-male-f3.wav',
+    'F4': '../../variations/app/Samples/Chorus/chorus-male-f4.wav',
+    'G#2': '../../variations/app/Samples/Chorus/chorus-male-g%232.wav',
+    'G#3': '../../variations/app/Samples/Chorus/chorus-male-g%233.wav',
+    'G2': '../../variations/app/Samples/Chorus/chorus-male-g2.wav',
+    'G3': '../../variations/app/Samples/Chorus/chorus-male-g3.wav'
   },
   'Clarinet': {
-    'B3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-b3.mp3',
-    'B4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-b4.mp3',
-    'B5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-b5.mp3',
-    'D3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-d3.mp3',
-    'D4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-d4.mp3',
-    'D5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-d5.mp3',
-    'D6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-d6.mp3',
-    'F3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-f3.mp3',
-    'F4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-f4.mp3',
-    'F5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-f5.mp3',
-    'G#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-g%233.mp3',
-    'G#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-g%234.mp3',
-    'G#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinet-g%235.mp3'
+    'B3': '../../variations/app/Samples/Clarinet/clarinet-b3.wav',
+    'B4': '../../variations/app/Samples/Clarinet/clarinet-b4.wav',
+    'B5': '../../variations/app/Samples/Clarinet/clarinet-b5.wav',
+    'D3': '../../variations/app/Samples/Clarinet/clarinet-d3.wav',
+    'D4': '../../variations/app/Samples/Clarinet/clarinet-d4.wav',
+    'D5': '../../variations/app/Samples/Clarinet/clarinet-d5.wav',
+    'D6': '../../variations/app/Samples/Clarinet/clarinet-d6.wav',
+    'F3': '../../variations/app/Samples/Clarinet/clarinet-f3.wav',
+    'F4': '../../variations/app/Samples/Clarinet/clarinet-f4.wav',
+    'F5': '../../variations/app/Samples/Clarinet/clarinet-f5.wav',
+    'G#3': '../../variations/app/Samples/Clarinet/clarinet-g%233.wav',
+    'G#4': '../../variations/app/Samples/Clarinet/clarinet-g%234.wav',
+    'G#5': '../../variations/app/Samples/Clarinet/clarinet-g%235.wav'
   },
   'Clarinets': {
-    'B3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-b3.mp3',
-    'B4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-b4.mp3',
-    'B5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-b5.mp3',
-    'D3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-d3.mp3',
-    'D4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-d4.mp3',
-    'D5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-d5.mp3',
-    'D6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-d6.mp3',
-    'F3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-f3.mp3',
-    'F4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-f4.mp3',
-    'F5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-f5.mp3',
-    'G#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-g%233.mp3',
-    'G#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-g%234.mp3',
-    'G#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/clarinets-sus-g%235.mp3'
+    'B3': '../../variations/app/Samples/Clarinets/clarinets-sus-b3.wav',
+    'B4': '../../variations/app/Samples/Clarinets/clarinets-sus-b4.wav',
+    'B5': '../../variations/app/Samples/Clarinets/clarinets-sus-b5.wav',
+    'D3': '../../variations/app/Samples/Clarinets/clarinets-sus-d3.wav',
+    'D4': '../../variations/app/Samples/Clarinets/clarinets-sus-d4.wav',
+    'D5': '../../variations/app/Samples/Clarinets/clarinets-sus-d5.wav',
+    'D6': '../../variations/app/Samples/Clarinets/clarinets-sus-d6.wav',
+    'F3': '../../variations/app/Samples/Clarinets/clarinets-sus-f3.wav',
+    'F4': '../../variations/app/Samples/Clarinets/clarinets-sus-f4.wav',
+    'F5': '../../variations/app/Samples/Clarinets/clarinets-sus-f5.wav',
+    'G#3': '../../variations/app/Samples/Clarinets/clarinets-sus-g%233.wav',
+    'G#4': '../../variations/app/Samples/Clarinets/clarinets-sus-g%234.wav',
+    'G#5': '../../variations/app/Samples/Clarinets/clarinets-sus-g%235.wav'
   },
   'Contrabassoon': {
-    'A#0': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-a%230.mp3',
-    'A#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-a%231.mp3',
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-a%233.mp3',
-    'C#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-c%231.mp3',
-    'C#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-c%232.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-c%233.mp3',
-    'E1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-e1.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-e3.mp3',
-    'G1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-g1.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/contrabassoon-g3.mp3'
+    'A#0': '../../variations/app/Samples/Contrabassoon/contrabassoon-a%230.wav',
+    'A#1': '../../variations/app/Samples/Contrabassoon/contrabassoon-a%231.wav',
+    'A#2': '../../variations/app/Samples/Contrabassoon/contrabassoon-a%232.wav',
+    'A#3': '../../variations/app/Samples/Contrabassoon/contrabassoon-a%233.wav',
+    'C#1': '../../variations/app/Samples/Contrabassoon/contrabassoon-c%231.wav',
+    'C#2': '../../variations/app/Samples/Contrabassoon/contrabassoon-c%232.wav',
+    'C#3': '../../variations/app/Samples/Contrabassoon/contrabassoon-c%233.wav',
+    'E1': '../../variations/app/Samples/Contrabassoon/contrabassoon-e1.wav',
+    'E2': '../../variations/app/Samples/Contrabassoon/contrabassoon-e2.wav',
+    'E3': '../../variations/app/Samples/Contrabassoon/contrabassoon-e3.wav',
+    'G1': '../../variations/app/Samples/Contrabassoon/contrabassoon-g1.wav',
+    'G2': '../../variations/app/Samples/Contrabassoon/contrabassoon-g2.wav',
+    'G3': '../../variations/app/Samples/Contrabassoon/contrabassoon-g3.wav'
   },
   'Cor Anglais': {
-    'B3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-b3.mp3',
-    'B4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-b4.mp3',
-    'D4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-d4.mp3',
-    'D5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-d5.mp3',
-    'F3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-f3.mp3',
-    'F4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-f4.mp3',
-    'F5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-f5.mp3',
-    'G#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-g%233.mp3',
-    'G#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/cor_anglais-g%234.mp3'
+    'B3': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-b3.wav',
+    'B4': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-b4.wav',
+    'D4': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-d4.wav',
+    'D5': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-d5.wav',
+    'F3': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-f3.wav',
+    'F4': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-f4.wav',
+    'F5': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-f5.wav',
+    'G#3': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-g%233.wav',
+    'G#4': '../../variations/app/Samples/Cor%20Anglais/cor_anglais-g%234.wav'
   },
   'Flute': {
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-a5.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-c6.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-d%235.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flute-f%235.mp3'
+    'A3': '../../variations/app/Samples/Flute/flute-a3.wav',
+    'A4': '../../variations/app/Samples/Flute/flute-a4.wav',
+    'A5': '../../variations/app/Samples/Flute/flute-a5.wav',
+    'C3': '../../variations/app/Samples/Flute/flute-c3.wav',
+    'C4': '../../variations/app/Samples/Flute/flute-c4.wav',
+    'C5': '../../variations/app/Samples/Flute/flute-c5.wav',
+    'C6': '../../variations/app/Samples/Flute/flute-c6.wav',
+    'D#3': '../../variations/app/Samples/Flute/flute-d%233.wav',
+    'D#4': '../../variations/app/Samples/Flute/flute-d%234.wav',
+    'D#5': '../../variations/app/Samples/Flute/flute-d%235.wav',
+    'F#3': '../../variations/app/Samples/Flute/flute-f%233.wav',
+    'F#4': '../../variations/app/Samples/Flute/flute-f%234.wav',
+    'F#5': '../../variations/app/Samples/Flute/flute-f%235.wav'
   },
   'Flutes': {
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-a5.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-c5.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-d%235.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/flutes-sus-f%235.mp3'
+    'A3': '../../variations/app/Samples/Flutes/flutes-sus-a3.wav',
+    'A4': '../../variations/app/Samples/Flutes/flutes-sus-a4.wav',
+    'A5': '../../variations/app/Samples/Flutes/flutes-sus-a5.wav',
+    'C3': '../../variations/app/Samples/Flutes/flutes-sus-c3.wav',
+    'C4': '../../variations/app/Samples/Flutes/flutes-sus-c4.wav',
+    'C5': '../../variations/app/Samples/Flutes/flutes-sus-c5.wav',
+    'D#3': '../../variations/app/Samples/Flutes/flutes-sus-d%233.wav',
+    'D#4': '../../variations/app/Samples/Flutes/flutes-sus-d%234.wav',
+    'D#5': '../../variations/app/Samples/Flutes/flutes-sus-d%235.wav',
+    'F#3': '../../variations/app/Samples/Flutes/flutes-sus-f%233.wav',
+    'F#4': '../../variations/app/Samples/Flutes/flutes-sus-f%234.wav',
+    'F#5': '../../variations/app/Samples/Flutes/flutes-sus-f%235.wav'
   },
   'Grand Piano': {
-    'A1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a1.mp3',
-    'A2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a2.mp3',
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a5.mp3',
-    'A6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a6.mp3',
-    'A7': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-a7.mp3',
-    'C1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c1.mp3',
-    'C2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c2.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c6.mp3',
-    'C7': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c7.mp3',
-    'C8': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-c8.mp3',
-    'D#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%231.mp3',
-    'D#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%232.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%235.mp3',
-    'D#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%236.mp3',
-    'D#7': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-d%237.mp3',
-    'F#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%231.mp3',
-    'F#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%232.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%235.mp3',
-    'F#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%236.mp3',
-    'F#7': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piano-f-f%237.mp3'
+    'A1': '../../variations/app/Samples/Grand%20Piano/piano-f-a1.wav',
+    'A2': '../../variations/app/Samples/Grand%20Piano/piano-f-a2.wav',
+    'A3': '../../variations/app/Samples/Grand%20Piano/piano-f-a3.wav',
+    'A4': '../../variations/app/Samples/Grand%20Piano/piano-f-a4.wav',
+    'A5': '../../variations/app/Samples/Grand%20Piano/piano-f-a5.wav',
+    'A6': '../../variations/app/Samples/Grand%20Piano/piano-f-a6.wav',
+    'A7': '../../variations/app/Samples/Grand%20Piano/piano-f-a7.wav',
+    'C1': '../../variations/app/Samples/Grand%20Piano/piano-f-c1.wav',
+    'C2': '../../variations/app/Samples/Grand%20Piano/piano-f-c2.wav',
+    'C3': '../../variations/app/Samples/Grand%20Piano/piano-f-c3.wav',
+    'C4': '../../variations/app/Samples/Grand%20Piano/piano-f-c4.wav',
+    'C5': '../../variations/app/Samples/Grand%20Piano/piano-f-c5.wav',
+    'C6': '../../variations/app/Samples/Grand%20Piano/piano-f-c6.wav',
+    'C7': '../../variations/app/Samples/Grand%20Piano/piano-f-c7.wav',
+    'C8': '../../variations/app/Samples/Grand%20Piano/piano-f-c8.wav',
+    'D#1': '../../variations/app/Samples/Grand%20Piano/piano-f-d%231.wav',
+    'D#2': '../../variations/app/Samples/Grand%20Piano/piano-f-d%232.wav',
+    'D#3': '../../variations/app/Samples/Grand%20Piano/piano-f-d%233.wav',
+    'D#4': '../../variations/app/Samples/Grand%20Piano/piano-f-d%234.wav',
+    'D#5': '../../variations/app/Samples/Grand%20Piano/piano-f-d%235.wav',
+    'D#6': '../../variations/app/Samples/Grand%20Piano/piano-f-d%236.wav',
+    'D#7': '../../variations/app/Samples/Grand%20Piano/piano-f-d%237.wav',
+    'F#1': '../../variations/app/Samples/Grand%20Piano/piano-f-f%231.wav',
+    'F#2': '../../variations/app/Samples/Grand%20Piano/piano-f-f%232.wav',
+    'F#3': '../../variations/app/Samples/Grand%20Piano/piano-f-f%233.wav',
+    'F#4': '../../variations/app/Samples/Grand%20Piano/piano-f-f%234.wav',
+    'F#5': '../../variations/app/Samples/Grand%20Piano/piano-f-f%235.wav',
+    'F#6': '../../variations/app/Samples/Grand%20Piano/piano-f-f%236.wav',
+    'F#7': '../../variations/app/Samples/Grand%20Piano/piano-f-f%237.wav'
   },
   'Harp': {
-    'A2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-a2.mp3',
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-a5.mp3',
-    'A6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-a6.mp3',
-    'C2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-c2.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-c6.mp3',
-    'C7': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-c7.mp3',
-    'D#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-d%232.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-d%235.mp3',
-    'D#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-d%236.mp3',
-    'F#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-f%232.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-f%235.mp3',
-    'F#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/harp-f%236.mp3'
+    'A2': '../../variations/app/Samples/Harp/harp-a2.wav',
+    'A3': '../../variations/app/Samples/Harp/harp-a3.wav',
+    'A4': '../../variations/app/Samples/Harp/harp-a4.wav',
+    'A5': '../../variations/app/Samples/Harp/harp-a5.wav',
+    'A6': '../../variations/app/Samples/Harp/harp-a6.wav',
+    'C2': '../../variations/app/Samples/Harp/harp-c2.wav',
+    'C3': '../../variations/app/Samples/Harp/harp-c3.wav',
+    'C4': '../../variations/app/Samples/Harp/harp-c4.wav',
+    'C5': '../../variations/app/Samples/Harp/harp-c5.wav',
+    'C6': '../../variations/app/Samples/Harp/harp-c6.wav',
+    'C7': '../../variations/app/Samples/Harp/harp-c7.wav',
+    'D#2': '../../variations/app/Samples/Harp/harp-d%232.wav',
+    'D#3': '../../variations/app/Samples/Harp/harp-d%233.wav',
+    'D#4': '../../variations/app/Samples/Harp/harp-d%234.wav',
+    'D#5': '../../variations/app/Samples/Harp/harp-d%235.wav',
+    'D#6': '../../variations/app/Samples/Harp/harp-d%236.wav',
+    'F#2': '../../variations/app/Samples/Harp/harp-f%232.wav',
+    'F#3': '../../variations/app/Samples/Harp/harp-f%233.wav',
+    'F#4': '../../variations/app/Samples/Harp/harp-f%234.wav',
+    'F#5': '../../variations/app/Samples/Harp/harp-f%235.wav',
+    'F#6': '../../variations/app/Samples/Harp/harp-f%236.wav'
   },
   'Horn': {
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-a%234.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-c%235.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-e5.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horn-g4.mp3'
+    'A#2': '../../variations/app/Samples/Horn/horn-a%232.wav',
+    'A#3': '../../variations/app/Samples/Horn/horn-a%233.wav',
+    'A#4': '../../variations/app/Samples/Horn/horn-a%234.wav',
+    'C#3': '../../variations/app/Samples/Horn/horn-c%233.wav',
+    'C#4': '../../variations/app/Samples/Horn/horn-c%234.wav',
+    'C#5': '../../variations/app/Samples/Horn/horn-c%235.wav',
+    'E2': '../../variations/app/Samples/Horn/horn-e2.wav',
+    'E3': '../../variations/app/Samples/Horn/horn-e3.wav',
+    'E4': '../../variations/app/Samples/Horn/horn-e4.wav',
+    'E5': '../../variations/app/Samples/Horn/horn-e5.wav',
+    'G2': '../../variations/app/Samples/Horn/horn-g2.wav',
+    'G3': '../../variations/app/Samples/Horn/horn-g3.wav',
+    'G4': '../../variations/app/Samples/Horn/horn-g4.wav'
   },
   'Horns': {
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-a%234.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-c%234.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-e4.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/horns-sus-g4.mp3'
+    'A#2': '../../variations/app/Samples/Horns/horns-sus-a%232.wav',
+    'A#3': '../../variations/app/Samples/Horns/horns-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/Horns/horns-sus-a%234.wav',
+    'C#3': '../../variations/app/Samples/Horns/horns-sus-c%233.wav',
+    'C#4': '../../variations/app/Samples/Horns/horns-sus-c%234.wav',
+    'E2': '../../variations/app/Samples/Horns/horns-sus-e2.wav',
+    'E3': '../../variations/app/Samples/Horns/horns-sus-e3.wav',
+    'E4': '../../variations/app/Samples/Horns/horns-sus-e4.wav',
+    'G2': '../../variations/app/Samples/Horns/horns-sus-g2.wav',
+    'G3': '../../variations/app/Samples/Horns/horns-sus-g3.wav',
+    'G4': '../../variations/app/Samples/Horns/horns-sus-g4.wav'
   },
   'Oboe': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-a%235.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-c%235.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-c6.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-e5.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboe-g5.mp3'
+    'A#3': '../../variations/app/Samples/Oboe/oboe-a%233.wav',
+    'A#4': '../../variations/app/Samples/Oboe/oboe-a%234.wav',
+    'A#5': '../../variations/app/Samples/Oboe/oboe-a%235.wav',
+    'C#4': '../../variations/app/Samples/Oboe/oboe-c%234.wav',
+    'C#5': '../../variations/app/Samples/Oboe/oboe-c%235.wav',
+    'C6': '../../variations/app/Samples/Oboe/oboe-c6.wav',
+    'E4': '../../variations/app/Samples/Oboe/oboe-e4.wav',
+    'E5': '../../variations/app/Samples/Oboe/oboe-e5.wav',
+    'G4': '../../variations/app/Samples/Oboe/oboe-g4.wav',
+    'G5': '../../variations/app/Samples/Oboe/oboe-g5.wav'
   },
   'Oboes': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-a%235.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-c%236.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-e6.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/oboes-sus-g5.mp3'
+    'A#3': '../../variations/app/Samples/Oboes/oboes-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/Oboes/oboes-sus-a%234.wav',
+    'A#5': '../../variations/app/Samples/Oboes/oboes-sus-a%235.wav',
+    'C#4': '../../variations/app/Samples/Oboes/oboes-sus-c%234.wav',
+    'C#5': '../../variations/app/Samples/Oboes/oboes-sus-c%235.wav',
+    'C#6': '../../variations/app/Samples/Oboes/oboes-sus-c%236.wav',
+    'E4': '../../variations/app/Samples/Oboes/oboes-sus-e4.wav',
+    'E5': '../../variations/app/Samples/Oboes/oboes-sus-e5.wav',
+    'E6': '../../variations/app/Samples/Oboes/oboes-sus-e6.wav',
+    'G4': '../../variations/app/Samples/Oboes/oboes-sus-g4.wav',
+    'G5': '../../variations/app/Samples/Oboes/oboes-sus-g5.wav'
   },
   'Chimes': {
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-a5.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-c6.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-d%235.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/chimes-f%235.mp3'
+    'A3': '../../variations/app/Samples/Percussion/chimes-a3.wav',
+    'A4': '../../variations/app/Samples/Percussion/chimes-a4.wav',
+    'A5': '../../variations/app/Samples/Percussion/chimes-a5.wav',
+    'C3': '../../variations/app/Samples/Percussion/chimes-c3.wav',
+    'C4': '../../variations/app/Samples/Percussion/chimes-c4.wav',
+    'C5': '../../variations/app/Samples/Percussion/chimes-c5.wav',
+    'C6': '../../variations/app/Samples/Percussion/chimes-c6.wav',
+    'D#3': '../../variations/app/Samples/Percussion/chimes-d%233.wav',
+    'D#4': '../../variations/app/Samples/Percussion/chimes-d%234.wav',
+    'D#5': '../../variations/app/Samples/Percussion/chimes-d%235.wav',
+    'F#3': '../../variations/app/Samples/Percussion/chimes-f%233.wav',
+    'F#4': '../../variations/app/Samples/Percussion/chimes-f%234.wav',
+    'F#5': '../../variations/app/Samples/Percussion/chimes-f%235.wav'
   },
   'Glockenspiel': {
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-a5.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-c6.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-d%235.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/glockenspiel-f%235.mp3'
+    'A3': '../../variations/app/Samples/Percussion/glockenspiel-a3.wav',
+    'A4': '../../variations/app/Samples/Percussion/glockenspiel-a4.wav',
+    'A5': '../../variations/app/Samples/Percussion/glockenspiel-a5.wav',
+    'C3': '../../variations/app/Samples/Percussion/glockenspiel-c3.wav',
+    'C4': '../../variations/app/Samples/Percussion/glockenspiel-c4.wav',
+    'C5': '../../variations/app/Samples/Percussion/glockenspiel-c5.wav',
+    'C6': '../../variations/app/Samples/Percussion/glockenspiel-c6.wav',
+    'D#3': '../../variations/app/Samples/Percussion/glockenspiel-d%233.wav',
+    'D#4': '../../variations/app/Samples/Percussion/glockenspiel-d%234.wav',
+    'D#5': '../../variations/app/Samples/Percussion/glockenspiel-d%235.wav',
+    'F#3': '../../variations/app/Samples/Percussion/glockenspiel-f%233.wav',
+    'F#4': '../../variations/app/Samples/Percussion/glockenspiel-f%234.wav',
+    'F#5': '../../variations/app/Samples/Percussion/glockenspiel-f%235.wav'
   },
   'Xylophone': {
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-a%235.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-c%235.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-e5.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/xylophone-g5.mp3'
+    'A#2': '../../variations/app/Samples/Percussion/xylophone-a%232.wav',
+    'A#3': '../../variations/app/Samples/Percussion/xylophone-a%233.wav',
+    'A#4': '../../variations/app/Samples/Percussion/xylophone-a%234.wav',
+    'A#5': '../../variations/app/Samples/Percussion/xylophone-a%235.wav',
+    'C#3': '../../variations/app/Samples/Percussion/xylophone-c%233.wav',
+    'C#4': '../../variations/app/Samples/Percussion/xylophone-c%234.wav',
+    'C#5': '../../variations/app/Samples/Percussion/xylophone-c%235.wav',
+    'E3': '../../variations/app/Samples/Percussion/xylophone-e3.wav',
+    'E4': '../../variations/app/Samples/Percussion/xylophone-e4.wav',
+    'E5': '../../variations/app/Samples/Percussion/xylophone-e5.wav',
+    'G2': '../../variations/app/Samples/Percussion/xylophone-g2.wav',
+    'G3': '../../variations/app/Samples/Percussion/xylophone-g3.wav',
+    'G4': '../../variations/app/Samples/Percussion/xylophone-g4.wav',
+    'G5': '../../variations/app/Samples/Percussion/xylophone-g5.wav'
   },
   'Piccolo': {
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-a5.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-c6.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-d%235.mp3',
-    'D#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-d%236.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-f%235.mp3',
-    'F#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/piccolo-f%236.mp3'
+    'A4': '../../variations/app/Samples/Piccolo/piccolo-a4.wav',
+    'A5': '../../variations/app/Samples/Piccolo/piccolo-a5.wav',
+    'C4': '../../variations/app/Samples/Piccolo/piccolo-c4.wav',
+    'C5': '../../variations/app/Samples/Piccolo/piccolo-c5.wav',
+    'C6': '../../variations/app/Samples/Piccolo/piccolo-c6.wav',
+    'D#4': '../../variations/app/Samples/Piccolo/piccolo-d%234.wav',
+    'D#5': '../../variations/app/Samples/Piccolo/piccolo-d%235.wav',
+    'D#6': '../../variations/app/Samples/Piccolo/piccolo-d%236.wav',
+    'F#4': '../../variations/app/Samples/Piccolo/piccolo-f%234.wav',
+    'F#5': '../../variations/app/Samples/Piccolo/piccolo-f%235.wav',
+    'F#6': '../../variations/app/Samples/Piccolo/piccolo-f%236.wav'
   },
   'Tenor Trombone': {
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-a%234.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-c%234.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-e4.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tenor_trombone-g4.mp3'
+    'A#2': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-a%232.wav',
+    'A#3': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-a%233.wav',
+    'A#4': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-a%234.wav',
+    'C#3': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-c%233.wav',
+    'C#4': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-c%234.wav',
+    'E2': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-e2.wav',
+    'E3': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-e3.wav',
+    'E4': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-e4.wav',
+    'G2': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-g2.wav',
+    'G3': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-g3.wav',
+    'G4': '../../variations/app/Samples/Tenor%20Trombone/tenor_trombone-g4.wav'
   },
   'Trombones': {
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-a%234.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-c%235.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-e5.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trombones-sus-g4.mp3'
+    'A#2': '../../variations/app/Samples/Trombones/trombones-sus-a%232.wav',
+    'A#3': '../../variations/app/Samples/Trombones/trombones-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/Trombones/trombones-sus-a%234.wav',
+    'C#3': '../../variations/app/Samples/Trombones/trombones-sus-c%233.wav',
+    'C#4': '../../variations/app/Samples/Trombones/trombones-sus-c%234.wav',
+    'C#5': '../../variations/app/Samples/Trombones/trombones-sus-c%235.wav',
+    'E2': '../../variations/app/Samples/Trombones/trombones-sus-e2.wav',
+    'E3': '../../variations/app/Samples/Trombones/trombones-sus-e3.wav',
+    'E4': '../../variations/app/Samples/Trombones/trombones-sus-e4.wav',
+    'E5': '../../variations/app/Samples/Trombones/trombones-sus-e5.wav',
+    'G2': '../../variations/app/Samples/Trombones/trombones-sus-g2.wav',
+    'G3': '../../variations/app/Samples/Trombones/trombones-sus-g3.wav',
+    'G4': '../../variations/app/Samples/Trombones/trombones-sus-g4.wav'
   },
   'Trumpet': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-a%235.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-c%236.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-e6.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpet-g5.mp3'
+    'A#3': '../../variations/app/Samples/Trumpet/trumpet-a%233.wav',
+    'A#4': '../../variations/app/Samples/Trumpet/trumpet-a%234.wav',
+    'A#5': '../../variations/app/Samples/Trumpet/trumpet-a%235.wav',
+    'C#4': '../../variations/app/Samples/Trumpet/trumpet-c%234.wav',
+    'C#5': '../../variations/app/Samples/Trumpet/trumpet-c%235.wav',
+    'C#6': '../../variations/app/Samples/Trumpet/trumpet-c%236.wav',
+    'E3': '../../variations/app/Samples/Trumpet/trumpet-e3.wav',
+    'E4': '../../variations/app/Samples/Trumpet/trumpet-e4.wav',
+    'E5': '../../variations/app/Samples/Trumpet/trumpet-e5.wav',
+    'E6': '../../variations/app/Samples/Trumpet/trumpet-e6.wav',
+    'G3': '../../variations/app/Samples/Trumpet/trumpet-g3.wav',
+    'G4': '../../variations/app/Samples/Trumpet/trumpet-g4.wav',
+    'G5': '../../variations/app/Samples/Trumpet/trumpet-g5.wav'
   },
   'Trumpets': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-a%235.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-c%236.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-e3.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-e6.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/trumpets-sus-g5.mp3'
+    'A#3': '../../variations/app/Samples/Trumpets/trumpets-sus-a%233.wav',
+    'A#4': '../../variations/app/Samples/Trumpets/trumpets-sus-a%234.wav',
+    'A#5': '../../variations/app/Samples/Trumpets/trumpets-sus-a%235.wav',
+    'C#4': '../../variations/app/Samples/Trumpets/trumpets-sus-c%234.wav',
+    'C#5': '../../variations/app/Samples/Trumpets/trumpets-sus-c%235.wav',
+    'C#6': '../../variations/app/Samples/Trumpets/trumpets-sus-c%236.wav',
+    'E3': '../../variations/app/Samples/Trumpets/trumpets-sus-e3.wav',
+    'E4': '../../variations/app/Samples/Trumpets/trumpets-sus-e4.wav',
+    'E5': '../../variations/app/Samples/Trumpets/trumpets-sus-e5.wav',
+    'E6': '../../variations/app/Samples/Trumpets/trumpets-sus-e6.wav',
+    'G3': '../../variations/app/Samples/Trumpets/trumpets-sus-g3.wav',
+    'G4': '../../variations/app/Samples/Trumpets/trumpets-sus-g4.wav',
+    'G5': '../../variations/app/Samples/Trumpets/trumpets-sus-g5.wav'
   },
   'Tuba': {
-    'A#1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-a%231.mp3',
-    'A#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-a%232.mp3',
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-a%233.mp3',
-    'C#2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-c%232.mp3',
-    'C#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-c%233.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-c%234.mp3',
-    'E1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-e1.mp3',
-    'E2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-e2.mp3',
-    'E3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-e3.mp3',
-    'G1': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-g1.mp3',
-    'G2': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-g2.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/tuba-sus-g3.mp3'
+    'A#1': '../../variations/app/Samples/Tuba/tuba-sus-a%231.wav',
+    'A#2': '../../variations/app/Samples/Tuba/tuba-sus-a%232.wav',
+    'A#3': '../../variations/app/Samples/Tuba/tuba-sus-a%233.wav',
+    'C#2': '../../variations/app/Samples/Tuba/tuba-sus-c%232.wav',
+    'C#3': '../../variations/app/Samples/Tuba/tuba-sus-c%233.wav',
+    'C#4': '../../variations/app/Samples/Tuba/tuba-sus-c%234.wav',
+    'E1': '../../variations/app/Samples/Tuba/tuba-sus-e1.wav',
+    'E2': '../../variations/app/Samples/Tuba/tuba-sus-e2.wav',
+    'E3': '../../variations/app/Samples/Tuba/tuba-sus-e3.wav',
+    'G1': '../../variations/app/Samples/Tuba/tuba-sus-g1.wav',
+    'G2': '../../variations/app/Samples/Tuba/tuba-sus-g2.wav',
+    'G3': '../../variations/app/Samples/Tuba/tuba-sus-g3.wav'
   },
   'Violas': {
-    'A3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-a3.mp3',
-    'A4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-a4.mp3',
-    'A5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-a5.mp3',
-    'C3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-c3.mp3',
-    'C4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-c4.mp3',
-    'C5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-c5.mp3',
-    'C6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-c6.mp3',
-    'D#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-d%233.mp3',
-    'D#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-d%234.mp3',
-    'D#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-d%235.mp3',
-    'F#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-f%233.mp3',
-    'F#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-f%234.mp3',
-    'F#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violas-sus-f%235.mp3'
+    'A3': '../../variations/app/Samples/Violas/violas-sus-a3.wav',
+    'A4': '../../variations/app/Samples/Violas/violas-sus-a4.wav',
+    'A5': '../../variations/app/Samples/Violas/violas-sus-a5.wav',
+    'C3': '../../variations/app/Samples/Violas/violas-sus-c3.wav',
+    'C4': '../../variations/app/Samples/Violas/violas-sus-c4.wav',
+    'C5': '../../variations/app/Samples/Violas/violas-sus-c5.wav',
+    'C6': '../../variations/app/Samples/Violas/violas-sus-c6.wav',
+    'D#3': '../../variations/app/Samples/Violas/violas-sus-d%233.wav',
+    'D#4': '../../variations/app/Samples/Violas/violas-sus-d%234.wav',
+    'D#5': '../../variations/app/Samples/Violas/violas-sus-d%235.wav',
+    'F#3': '../../variations/app/Samples/Violas/violas-sus-f%233.wav',
+    'F#4': '../../variations/app/Samples/Violas/violas-sus-f%234.wav',
+    'F#5': '../../variations/app/Samples/Violas/violas-sus-f%235.wav'
   },
   'Violin': {
-    'A#3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-a%233.mp3',
-    'A#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-a%234.mp3',
-    'A#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-a%235.mp3',
-    'A#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-a%236.mp3',
-    'C#4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-c%234.mp3',
-    'C#5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-c%235.mp3',
-    'C#6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-c%236.mp3',
-    'C#7': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-c%237.mp3',
-    'E4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-e4.mp3',
-    'E5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-e5.mp3',
-    'E6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-e6.mp3',
-    'G3': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-g3.mp3',
-    'G4': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-g4.mp3',
-    'G5': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-g5.mp3',
-    'G6': 'https://cdn.glitch.com/115d8006-28e9-4219-b058-af685532ae6b/violin-g6.mp3'
+    'A#3': '../../variations/app/Samples/Violin/violin-a%233.wav',
+    'A#4': '../../variations/app/Samples/Violin/violin-a%234.wav',
+    'A#5': '../../variations/app/Samples/Violin/violin-a%235.wav',
+    'A#6': '../../variations/app/Samples/Violin/violin-a%236.wav',
+    'C#4': '../../variations/app/Samples/Violin/violin-c%234.wav',
+    'C#5': '../../variations/app/Samples/Violin/violin-c%235.wav',
+    'C#6': '../../variations/app/Samples/Violin/violin-c%236.wav',
+    'C#7': '../../variations/app/Samples/Violin/violin-c%237.wav',
+    'E4': '../../variations/app/Samples/Violin/violin-e4.wav',
+    'E5': '../../variations/app/Samples/Violin/violin-e5.wav',
+    'E6': '../../variations/app/Samples/Violin/violin-e6.wav',
+    'G3': '../../variations/app/Samples/Violin/violin-g3.wav',
+    'G4': '../../variations/app/Samples/Violin/violin-g4.wav',
+    'G5': '../../variations/app/Samples/Violin/violin-g5.wav',
+    'G6': '../../variations/app/Samples/Violin/violin-g6.wav'
   }
 });
 
@@ -26815,7 +26815,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // import './export.js';
 
-let gapi;
 const startButton = document.getElementById('start');
 __WEBPACK_IMPORTED_MODULE_1_startaudiocontext___default()(__WEBPACK_IMPORTED_MODULE_0_tone___default.a.context, '#start').then(function(){
    startButton.hidden = true;
@@ -26825,58 +26824,9 @@ __WEBPACK_IMPORTED_MODULE_1_startaudiocontext___default()(__WEBPACK_IMPORTED_MOD
    __WEBPACK_IMPORTED_MODULE_0_tone___default.a.Transport.start("+0.1");
 
    __WEBPACK_IMPORTED_MODULE_7__synth_js__["a" /* default */].makeSynths();
-
-   __WEBPACK_IMPORTED_MODULE_2_google_client_api___default()()
-     .then(myGapi => {
-      gapi = myGapi;
-      try {
-        authorize();
-      } catch(e) {
-        authCb({ error: e.message });
-      }
-     })
-     .catch(() => {
-       authCb({ error: 'gapi load failed' });
-     });
-
+   __WEBPACK_IMPORTED_MODULE_8__ui_index2_js__["a" /* default */].store.set({auth:false});
+   playDemo();
 })
-
-const authButton = document.getElementById('auth-button');
-// Add an event listener to the 'auth-button'.
-document.getElementById('auth-button').addEventListener('click', authorize);
-
-function authorize(event) {
-  // Handles the authorization flow.
-  // `autoLoggedIn` should be false when invoked from the button click.
-  const autoLoggedIn = event ? false : true;
-  const authData = {
-    client_id: __WEBPACK_IMPORTED_MODULE_3__constants__["a" /* default */].CLIENT_ID,
-    scope: 'https://www.googleapis.com/auth/analytics.readonly',
-    immediate: autoLoggedIn
-  };
-
-  try {
-    gapi.auth2.authorize(authData, authCb);
-  } catch(e) {
-    authCb({ error: e.message });
-  }
-}
-
-function authCb(response) {
-   if (response.error) {
-    authButton.hidden = false;
-    __WEBPACK_IMPORTED_MODULE_8__ui_index2_js__["a" /* default */].store.set({auth:false});
-    playDemo();
-  } else {
-    // we're authorized, so get live data from the ga realtime api
-    // the queryAccounts function recurses, so it continues the "song" perpetually.
-    authButton.hidden = true;
-    __WEBPACK_IMPORTED_MODULE_8__ui_index2_js__["a" /* default */].store.set({auth:true});
-    __WEBPACK_IMPORTED_MODULE_7__synth_js__["a" /* default */].stop();
-    clearTimeout(demoTimeout);
-    __WEBPACK_IMPORTED_MODULE_4__gaQuery_js__["a" /* default */].queryAccounts(gapi,authorize);
-  }
-}
 
 let demoTimeout;
 function playDemo() {
@@ -26902,11 +26852,7 @@ function playDemo() {
 // we need to stop the loops that are currently playing and generate new ones
 function restart() {
   __WEBPACK_IMPORTED_MODULE_7__synth_js__["a" /* default */].stop();
-  if (__WEBPACK_IMPORTED_MODULE_8__ui_index2_js__["a" /* default */].store.get('auth')) {
-    __WEBPACK_IMPORTED_MODULE_4__gaQuery_js__["a" /* default */].queryAccounts(gapi,authorize);
-  } else {
-    playDemo();
-  }
+  playDemo();
 }
 
 // add click handlers for restart
@@ -27829,7 +27775,7 @@ var methods = {
 };
 
 function create_main_fragment(component, state) {
-	var html, head, text_1, body, div, div_1, h1, text_2_value = (state.$auth ? 'WebSonify' : 'Demo Mode'), text_2, text_3, text_4, div_2, button, text_6, button_1, text_8, input, label, text_10, div_3, div_4, input_1, label_1, text_13, div_5, input_2, text_14, br, text_15, label_2, text_16_value = state.$notesPerVisitor <= 0 ? `each note represents ${state.Math.pow(10,1-state.$notesPerVisitor)} visitors` : `each visitor represented by ${state.$notesPerVisitor} note${state.$notesPerVisitor === 1 ? "" : "s"}`, text_16, div_3_hidden_value, text_19, input_3, label_3, text_21, button_2, text_24, div_6, div_6_hidden_value, text_27, synthgroup_updating = {}, text_28, synthgroup_1_updating = {}, text_29, synthgroup_2_updating = {};
+	var html, head, text_1, body, div, div_1, h1, text_2_value = 'WebSonify', text_2, text_3, text_4, div_2, button, text_6, button_1, text_8, input, label, text_10, div_3, div_4, input_1, label_1, text_13, div_5, input_2, text_14, br, text_15, label_2, text_16_value = state.$notesPerVisitor <= 0 ? `each note represents ${state.Math.pow(10,1-state.$notesPerVisitor)} visitors` : `each visitor represented by ${state.$notesPerVisitor} note${state.$notesPerVisitor === 1 ? "" : "s"}`, text_16, div_3_hidden_value, text_19, input_3, label_3, text_21, button_2, text_24, div_6, div_6_hidden_value, text_27, synthgroup_updating = {}, text_28, synthgroup_1_updating = {}, text_29, synthgroup_2_updating = {};
 
 	function select_block_type(state) {
 		if (state.$key.endsWith("m")) return create_if_block;
@@ -27929,7 +27875,7 @@ function create_main_fragment(component, state) {
 		c: function create() {
 			html = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["b" /* createElement */])("html");
 			head = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["b" /* createElement */])("head");
-			head.innerHTML = "<link href=\"/styles.css\" rel=\"stylesheet\">";
+			head.innerHTML = "<link href=\"./styles.css\" rel=\"stylesheet\">";
 			text_1 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["c" /* createText */])("\n  ");
 			body = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["b" /* createElement */])("body");
 			div = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["b" /* createElement */])("div");
@@ -28036,13 +27982,6 @@ function create_main_fragment(component, state) {
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(button, div_2);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_6, div_2);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(button_1, div_2);
-			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_8, div_2);
-			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(input, div_2);
-
-			input.checked = state.$showAbout;
-
-			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(label, div_2);
-			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_10, div_2);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(div_3, div_2);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(div_4, div_3);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(input_1, div_4);
@@ -28069,8 +28008,6 @@ function create_main_fragment(component, state) {
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(label_3, div_2);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_21, div_2);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(button_2, div_2);
-			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_24, div_1);
-			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(div_6, div_1);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_27, div);
 			synthgroup._mount(div, null);
 			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__rbd_pnpm_volume_a9a5a4de_d512_4b59_b3a3_c7c5efa10592_node_modules_registry_npmjs_org_svelte_1_60_2_node_modules_svelte_shared_js__["h" /* appendNode */])(text_28, div);
@@ -28080,7 +28017,7 @@ function create_main_fragment(component, state) {
 		},
 
 		p: function update(changed, state) {
-			if ((changed.$auth) && text_2_value !== (text_2_value = (state.$auth ? 'WebSonify' : 'Demo Mode'))) {
+			if ((changed.$auth) && text_2_value !== (text_2_value = 'WebSonify')) {
 				text_2.data = text_2_value;
 			}
 
