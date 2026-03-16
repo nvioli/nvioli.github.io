@@ -1,123 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nick Violi</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --pink:   #ff2d9b;
+      --cyan:   #00b8d4;
+      --yellow: #f5c800;
+      --purple: #7b2fff;
+      --lime:   #2db800;
+      --bg:     #f4f2ee;
+      --ink:    #111111;
+      --ink-mid:#444444;
+      --ink-dim:#888888;
     }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: #332d2d;
-      color: #b7ada2;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 300;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
       min-height: 100vh;
-      padding: 10% 5%;
+      overflow-x: hidden;
+      position: relative;
+    }
+    canvas#bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
       max-width: 680px;
       margin: 0 auto;
+      padding: 60px 28px 80px;
     }
 
     h1 {
-      font-size: 1.4em;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      margin-bottom: 1.2em;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.2em, 10vw, 5em);
+      letter-spacing: 0.06em;
+      line-height: 1;
+      margin-bottom: 0.25em;
+    }
+    h1 .first { color: var(--ink); }
+    h1 .last  { color: var(--pink); }
+
+    .name-sub {
+      font-size: 0.72em;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .location {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1em;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: white;
+      background: var(--purple);
+      padding: 0.15em 0.7em;
     }
 
-    p {
-      line-height: 1.7;
-      margin-bottom: 2.4em;
+    .bio {
+      margin: 1.6em 0;
+      padding: 1.1em 1.3em;
+      border: 2px solid var(--pink);
+      border-left: 6px solid var(--pink);
+      background: rgba(255,255,255,0.72);
+      font-size: 0.88em;
+      line-height: 1.85;
+      color: var(--ink-mid);
     }
+    .email { font-size: 0.75em; color: var(--ink-dim); margin-top: 0.7em; }
 
     h2 {
-      font-size: 0.85em;
-      font-weight: 600;
-      text-transform: uppercase;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2em;
       letter-spacing: 0.12em;
-      margin-bottom: 1em;
-      margin-top: 2em;
+      color: var(--ink);
+      margin-top: 2.5em;
+      margin-bottom: 1.2em;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
     }
+    h2::before { content: '//'; color: var(--pink); font-size: 0.8em; }
+    h2::after  { content: ''; flex: 1; height: 2px; background: linear-gradient(90deg, var(--ink), transparent); margin-left: 0.4em; }
 
-    ul {
-      list-style: none;
-      margin-bottom: 1.8em;
-    }
+    ul { list-style: none; display: flex; flex-direction: column; gap: 1em; }
 
     li {
-      margin-bottom: 0.5em;
-      line-height: 1.6;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      background: rgba(255,255,255,0.72);
+      padding: 1.2em 1.4em;
+      position: relative;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
     }
+    li::before {
+      content: ''; position: absolute; top: 0; left: 0; width: 5px; height: 100%;
+    }
+    li:nth-child(1)::before { background: var(--cyan); }
+    li:nth-child(2)::before { background: var(--pink); }
+    li:nth-child(3)::before { background: var(--lime); }
 
-    a {
-      color: lightskyblue;
-      text-decoration: none;
-    }
+    li:nth-child(1):hover { border-color: var(--cyan); background: rgba(0,184,212,0.08); }
+    li:nth-child(2):hover { border-color: var(--pink); background: rgba(255,45,155,0.08); }
+    li:nth-child(3):hover { border-color: var(--lime); background: rgba(45,184,0,0.08); }
 
-    a:hover {
-      text-decoration: underline;
+    .project-title {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 0.95em;
+      letter-spacing: 0.05em;
+      display: block;
     }
-
-    .sep {
-      color: #5a5050;
-      margin: 0 0.4em;
-    }
+    li:nth-child(1) .project-title { color: var(--cyan); }
+    li:nth-child(2) .project-title { color: var(--pink); }
+    li:nth-child(3) .project-title { color: var(--lime); }
 
     .label {
-      color: #7a6f6f;
-      font-size: 0.8em;
+      font-size: 0.75em; color: var(--ink-dim);
+      margin-top: 0.35em; margin-bottom: 0.6em;
+      display: block; font-style: italic;
     }
+
+    /* Sub-link pills */
+    .links { display: flex; gap: 0.5em; flex-wrap: wrap; }
+    .links a {
+      font-size: 0.7em;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.25em 0.7em;
+      border: 1.5px solid currentColor;
+      transition: background 0.15s, color 0.15s;
+    }
+    li:nth-child(1) .links a { color: var(--cyan); }
+    li:nth-child(2) .links a { color: var(--pink); }
+    li:nth-child(3) .links a { color: var(--lime); }
+
+    li:nth-child(1) .links a:hover { background: var(--cyan);  color: #0a0a0a; border-color: var(--cyan); }
+    li:nth-child(2) .links a:hover { background: var(--pink);  color: #fff;    border-color: var(--pink); }
+    li:nth-child(3) .links a:hover { background: var(--lime);  color: #0a0a0a; border-color: var(--lime); }
   </style>
 </head>
-
 <body>
-  <h1>Nick Violi</h1>
-  <p>
+
+<canvas id="bg"></canvas>
+
+<div class="container">
+  <div style="margin-bottom:2em;">
+    <h1><span class="first">NICK </span><span class="last">VIOLI</span></h1>
+    <div class="name-sub">
+      <span>creative engineer</span>
+      <span class="location">DC</span>
+    </div>
+  </div>
+
+  <div class="bio">
     Creative software engineer exploring the intersection of code and sound.
-    Based in Washington, D.C.
-  </p>
-  <p>
-    nvioli at g<span style="display:none"></span>mail dot com
-  </p>
+    <div class="email">nvioli at g<span style="display:none"></span>mail dot com</div>
+  </div>
 
   <h2>Projects</h2>
-
   <ul>
-    <li>
-      <a href="https://astimedrawsnear.com/">As Time Draws Near</a>
-      <br>
+    <li data-href="https://astimedrawsnear.com/">
+      <span class="project-title">As Time Draws Near</span>
       <span class="label">Multimedia speculative fiction, 2026.</span>
     </li>
 
-    <li style="margin-top:1em;">
-      <strong>WebSonify</strong>
-      <br>
+    <li data-href="./websonify/app/">
+      <span class="project-title">WebSonify</span>
       <span class="label">Google Analytics traffic rendered as music with Tone.js, 2018.</span>
-      <br>
-      <a href="./websonify/app/">app</a>
-      <span class="sep">&middot;</span>
-      <a href="./websonify/slides/">slides</a>
-      <span class="sep">&middot;</span>
-      <a href="https://www.youtube.com/watch?v=Suwx85JFZBQ">video</a>
+      <span class="links">
+        <a href="./websonify/app/">app</a>
+        <a href="./websonify/slides/">slides</a>
+        <a href="https://www.youtube.com/watch?v=Suwx85JFZBQ">video</a>
+      </span>
     </li>
 
-    <li style="margin-top:1em;">
-      <strong>Variations I</strong>
-      <br>
+    <li data-href="./variations/app/">
+      <span class="project-title">Variations I</span>
       <span class="label">Implementation of an aleatoric John Cage piece, 2017.</span>
-      <br>
-      <a href="./variations/app/">app</a>
-      <span class="sep">&middot;</span>
-      <a href="./variations/slides/">slides</a>
+      <span class="links">
+        <a href="./variations/app/">app</a>
+        <a href="./variations/slides/">slides</a>
+      </span>
     </li>
-
   </ul>
-</body>
+</div>
 
+<script>
+// Card click — navigate to data-href unless user clicked a sub-link
+document.querySelectorAll('li[data-href]').forEach(li => {
+  li.addEventListener('click', e => {
+    if (e.target.closest('a')) return; // let sub-links handle themselves
+    window.location.href = li.dataset.href;
+  });
+});
+
+// === Background geometry ===
+const SEED = Math.floor(Math.random() * 1e8);
+
+function mulberry32(seed) {
+  return function() {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+let rng;
+const COLORS = ['#ff2d9b','#00b8d4','#f5c800','#7b2fff','#2db800'];
+function rc() { return COLORS[Math.floor(rng() * COLORS.length)]; }
+
+const canvas = document.getElementById('bg');
+const ctx    = canvas.getContext('2d');
+
+const MAX_ROT   = 0.003;
+const MAX_DRIFT = 0.18;
+const MAX_PULSE = 0.008;
+
+function motionRot()   { return { motion:'rotate', rotAngle:0, rotSpeed:(0.001+rng()*MAX_ROT)*(rng()>0.5?1:-1) }; }
+function motionDrift() {
+  const angle=rng()*Math.PI*2, spd=0.06+rng()*MAX_DRIFT;
+  return { motion:'drift', ox:0, oy:0, vx:Math.cos(angle)*spd, vy:Math.sin(angle)*spd };
+}
+function motionPulse() { return { motion:'pulse', phase:rng()*Math.PI*2, amp:0.025+rng()*0.035, speed:0.004+rng()*MAX_PULSE }; }
+function motionNone()  { return { motion:'none' }; }
+
+let shapes = [];
+
+function buildShapes(W, H) {
+  rng = mulberry32(SEED);
+  const s = [];
+
+  [[[W*0.78,0],[W,0],[W,H*0.28]],[[W*0.88,0],[W,0],[W,H*0.14]],
+   [[0,H*0.82],[W*0.13,H],[0,H]],[[0,H*0.92],[W*0.07,H],[0,H]]
+  ].forEach((pts,i) => s.push({ type:'filledTri', pts, color:COLORS[i<2?0:3], alpha:0.07+rng()*0.05, ...motionNone() }));
+
+  for (let i=0;i<5;i++) {
+    const cx=rng()*W, cy=rng()*H, r=40+rng()*110, a0=rng()*Math.PI*2;
+    const pts=[0,1,2].map(k=>{ const a=a0+k*(Math.PI*2/3); return [cx+Math.cos(a)*r,cy+Math.sin(a)*r]; });
+    const mc=rng(), m=mc<0.4?motionRot():mc<0.7?motionDrift():motionPulse();
+    s.push({ type:'strokeTri', pts, cx, cy, color:rc(), alpha:0.13+rng()*0.14, lw:0.8+rng(), ...m });
+  }
+
+  for (let g=0;g<3;g++) {
+    const cx=rng()*W, cy=H*0.3+rng()*H*0.6, maxR=50+rng()*120, ci=Math.floor(rng()*COLORS.length);
+    [1,0.65,0.38].forEach((f,k) =>
+      s.push({ type:'circle', cx, cy, r:maxR*f, color:COLORS[(ci+k)%COLORS.length], alpha:0.09+rng()*0.10, lw:0.8+rng()*0.6, ...motionPulse() }));
+  }
+
+  for (let g=0;g<3;g++) {
+    const ox=rng()*W*0.85, oy=rng()*H*0.75, dots=[];
+    for(let r=0;r<3;r++) for(let c=0;c<4;c++) dots.push([ox+c*36,oy+r*36]);
+    s.push({ type:'dots', dots, color:rc(), alpha:0.16+rng()*0.10, dotR:2, ...motionDrift() });
+  }
+
+  for (let g=0;g<3;g++) {
+    const cx=rng()*W, cy=rng()*H, inner=25+rng()*30, outer=inner+30+rng()*45;
+    s.push({ type:'starburst', cx, cy, inner, outer, color:rc(), alpha:0.15+rng()*0.13, lw:0.9+rng()*0.6, ...(rng()<0.5?motionRot():motionPulse()) });
+  }
+
+  for (let b=0;b<2;b++)
+    s.push({ type:'diag', y0:H*(0.1+rng()*0.55), W, H, color:rc(), alpha:0.07+rng()*0.06, ...motionNone() });
+
+  for (let i=0;i<6;i++) {
+    const x=rng()*W, y=rng()*H, sz=6+rng()*13, angle=rng()*Math.PI, filled=rng()>0.55;
+    s.push({ type:'rect', x, y, sz, baseAngle:angle, color:rc(), alpha:0.14+rng()*0.16, lw:1.2, filled, ...(rng()<0.5?motionRot():motionDrift()) });
+  }
+
+  for (let z=0;z<3;z++) {
+    const ox=rng()*W*0.55, oy=rng()*H, pts=[];
+    for(let i=0;i<6;i++) pts.push([ox+i*30,oy+(i%2===0?0:-28)]);
+    s.push({ type:'zigzag', pts, color:rc(), alpha:0.13+rng()*0.10, lw:1.2+rng()*0.6, ...motionNone() });
+  }
+
+  for (let i=0;i<5;i++) {
+    const cx=rng()*W, cy=rng()*H, r=7+rng()*8;
+    s.push({ type:'cross', cx, cy, r, color:rc(), alpha:0.18+rng()*0.14, lw:1.5, ...motionDrift() });
+  }
+
+  return s;
+}
+
+function rotatePts(pts, cx, cy, a) {
+  const cos=Math.cos(a), sin=Math.sin(a);
+  return pts.map(([px,py])=>{ const dx=px-cx,dy=py-cy; return [cx+dx*cos-dy*sin,cy+dx*sin+dy*cos]; });
+}
+
+function resize() {
+  canvas.width=window.innerWidth; canvas.height=window.innerHeight;
+  shapes=buildShapes(canvas.width, canvas.height);
+}
+window.addEventListener('resize', resize);
+resize();
+
+let frame=0;
+function tick() {
+  shapes.forEach(s=>{
+    if (s.motion==='rotate') s.rotAngle+=s.rotSpeed;
+    else if (s.motion==='drift') { s.ox+=s.vx; s.oy+=s.vy; }
+  });
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  shapes.forEach(s=>{
+    switch(s.type) {
+      case 'filledTri': {
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.fillStyle=s.color;
+        ctx.beginPath(); ctx.moveTo(s.pts[0][0],s.pts[0][1]);
+        s.pts.slice(1).forEach(p=>ctx.lineTo(p[0],p[1])); ctx.closePath(); ctx.fill();
+        ctx.restore(); break;
+      }
+      case 'strokeTri': {
+        let pts=s.pts;
+        if (s.motion==='rotate') pts=rotatePts(pts,s.cx,s.cy,s.rotAngle);
+        else if (s.motion==='drift') pts=pts.map(([px,py])=>[px+s.ox,py+s.oy]);
+        else { const sc=1+Math.sin(frame*s.speed+s.phase)*s.amp; pts=pts.map(([px,py])=>[s.cx+(px-s.cx)*sc,s.cy+(py-s.cy)*sc]); }
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.strokeStyle=s.color; ctx.lineWidth=s.lw;
+        ctx.beginPath(); ctx.moveTo(pts[0][0],pts[0][1]); pts.slice(1).forEach(p=>ctx.lineTo(p[0],p[1])); ctx.closePath(); ctx.stroke();
+        ctx.restore(); break;
+      }
+      case 'circle': {
+        const pulse=1+Math.sin(frame*s.speed+s.phase)*s.amp;
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.strokeStyle=s.color; ctx.lineWidth=s.lw;
+        ctx.beginPath(); ctx.arc(s.cx,s.cy,s.r*pulse,0,Math.PI*2); ctx.stroke();
+        ctx.restore(); break;
+      }
+      case 'dots': {
+        const ox=s.motion==='drift'?s.ox:0, oy=s.motion==='drift'?s.oy:0;
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.fillStyle=s.color;
+        s.dots.forEach(([dx,dy])=>{ ctx.beginPath(); ctx.arc(dx+ox,dy+oy,s.dotR,0,Math.PI*2); ctx.fill(); });
+        ctx.restore(); break;
+      }
+      case 'starburst': {
+        const {cx,cy}=s;
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.strokeStyle=s.color; ctx.lineWidth=s.lw;
+        const pulse = s.motion==='pulse' ? 1+Math.sin(frame*s.speed+s.phase)*s.amp : 1;
+        for(let i=0;i<8;i++) {
+          const a = i*Math.PI/4 + (s.motion==='rotate'?s.rotAngle:0);
+          ctx.beginPath();
+          ctx.moveTo(cx+Math.cos(a)*s.inner*pulse, cy+Math.sin(a)*s.inner*pulse);
+          ctx.lineTo(cx+Math.cos(a)*s.outer*pulse, cy+Math.sin(a)*s.outer*pulse);
+          ctx.stroke();
+        }
+        ctx.restore(); break;
+      }
+      case 'diag': {
+        [0,28,56].forEach((o,i)=>{
+          ctx.save(); ctx.globalAlpha=s.alpha*(1-i*0.3); ctx.strokeStyle=s.color; ctx.lineWidth=0.8;
+          ctx.beginPath(); ctx.moveTo(0,s.y0+o); ctx.lineTo(s.W,s.y0+o+s.H*0.28); ctx.stroke();
+          ctx.restore();
+        }); break;
+      }
+      case 'rect': {
+        let angle=s.baseAngle+(s.motion==='rotate'?s.rotAngle:0);
+        let tx=s.x+(s.motion==='drift'?s.ox:0), ty=s.y+(s.motion==='drift'?s.oy:0);
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.translate(tx,ty); ctx.rotate(angle);
+        if (s.filled) { ctx.fillStyle=s.color; ctx.fillRect(-s.sz/2,-s.sz/2,s.sz,s.sz); }
+        else { ctx.strokeStyle=s.color; ctx.lineWidth=s.lw; ctx.strokeRect(-s.sz/2,-s.sz/2,s.sz,s.sz); }
+        ctx.restore(); break;
+      }
+      case 'zigzag': {
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.strokeStyle=s.color; ctx.lineWidth=s.lw;
+        ctx.beginPath(); ctx.moveTo(s.pts[0][0],s.pts[0][1]);
+        s.pts.slice(1).forEach(([px,py])=>ctx.lineTo(px,py)); ctx.stroke();
+        ctx.restore(); break;
+      }
+      case 'cross': {
+        const ox=s.motion==='drift'?s.ox:0, oy=s.motion==='drift'?s.oy:0;
+        ctx.save(); ctx.globalAlpha=s.alpha; ctx.strokeStyle=s.color; ctx.lineWidth=s.lw;
+        ctx.beginPath();
+        ctx.moveTo(s.cx+ox-s.r,s.cy+oy); ctx.lineTo(s.cx+ox+s.r,s.cy+oy);
+        ctx.moveTo(s.cx+ox,s.cy+oy-s.r); ctx.lineTo(s.cx+ox,s.cy+oy+s.r);
+        ctx.stroke(); ctx.restore(); break;
+      }
+    }
+  });
+
+  frame++;
+  requestAnimationFrame(tick);
+}
+tick();
+</script>
+</body>
 </html>
