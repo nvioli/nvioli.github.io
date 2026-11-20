@@ -1,0 +1,124 @@
+:root {
+  --bg: #0F0F0F;
+  --surface: #1A1A1A;
+  --border: #2A2A2A;
+  --text: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  --accent: #A855F7;
+  --red: #FF2D20;
+  --orange: #FF9500;
+  --yellow: #FFD60A;
+  --green: #30D158;
+  --blue: #0A84FF;
+  --purple: #BF5AF2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+}
+a { color: inherit; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav (shared across every content page; invite/index.html intentionally opts out) */
+nav.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  flex-wrap: wrap;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; letter-spacing: -0.3px; text-decoration: none; }
+.brand-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; flex-wrap: wrap; }
+nav a.navlink { color: var(--text-secondary); text-decoration: none; font-size: 14px; font-weight: 600; margin-left: 28px; }
+nav a.navlink:hover { color: var(--text); }
+.nav-cta { padding: 9px 18px; font-size: 14px; }
+
+/* Store buttons */
+.store-row { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+}
+.store-btn.primary { background: #FFFFFF; color: #0F0F0F; border-color: transparent; }
+.store-btn.disabled { color: var(--text-secondary); cursor: default; opacity: 0.7; }
+.store-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+/* Hero */
+.hero { text-align: center; padding: 64px 24px 56px; }
+.hero .dots { display: flex; justify-content: center; gap: 12px; margin-bottom: 28px; }
+.dot { width: 14px; height: 14px; border-radius: 50%; }
+.hero h1 { font-size: 44px; font-weight: 800; letter-spacing: -1px; max-width: 680px; margin: 0 auto 18px; }
+.hero p.tagline { color: var(--text-secondary); font-size: 18px; max-width: 520px; margin: 0 auto 36px; }
+
+/* Landing sections */
+section { padding: 72px 24px; border-top: 1px solid var(--border); }
+section h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; text-align: center; margin-bottom: 12px; }
+section p.lede { color: var(--text-secondary); text-align: center; max-width: 560px; margin: 0 auto 44px; font-size: 16px; }
+
+.color-grid { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.color-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+.color-card .swatch-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.shape { width: 20px; height: 20px; flex-shrink: 0; }
+.color-card h3 { font-size: 17px; font-weight: 700; }
+.color-card .typical { color: var(--text-secondary); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 2px; }
+.color-card p.desc { color: var(--text-secondary); font-size: 14px; margin-top: 10px; }
+
+.steps { max-width: 760px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.step { text-align: center; }
+.step .num { width: 36px; height: 36px; border-radius: 50%; background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 14px; }
+.step h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.step p { color: var(--text-secondary); font-size: 14px; }
+
+.split { display: flex; align-items: center; gap: 48px; max-width: 900px; margin: 0 auto; }
+.split .copy { flex: 1; }
+.split .copy h2 { text-align: left; }
+.split .copy p.lede { text-align: left; margin-left: 0; }
+.qr-mock { flex-shrink: 0; width: 180px; height: 180px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+.qr-mock svg { width: 120px; height: 120px; }
+
+.venues-row { max-width: 640px; margin: 0 auto; text-align: center; }
+.venues-row .store-btn { margin-top: 18px; }
+
+.cta { text-align: center; }
+
+/* Doc-style pages: support, terms, guidelines, delete-account, privacy */
+.docwrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+.docwrap h1 { font-size: 30px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+.docwrap .updated { color: var(--text-secondary); font-size: 13px; margin-bottom: 36px; }
+.docwrap h2 { font-size: 18px; font-weight: 700; margin: 36px 0 10px; text-align: left; }
+.docwrap p, .docwrap li { color: #D4D4D8; font-size: 15px; margin-bottom: 10px; }
+.docwrap a { color: var(--accent); text-decoration: underline; }
+.docwrap ul { padding-left: 22px; margin-bottom: 10px; }
+.docwrap table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; }
+.docwrap th, .docwrap td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); color: #D4D4D8; vertical-align: top; }
+.docwrap th { color: var(--text-secondary); font-weight: 600; }
+.docwrap code { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 13px; }
+.docwrap .btn-row { margin-top: 24px; }
+
+footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--text-secondary); font-size: 13px; }
+footer a { text-decoration: underline; }
+footer .legal-row { margin-top: 10px; }
+footer .legal-row a { margin: 0 10px; }
+
+@media (max-width: 720px) {
+  .hero h1 { font-size: 32px; }
+  .color-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: 1fr; gap: 24px; }
+  .split { flex-direction: column; gap: 28px; text-align: center; }
+  .split .copy h2, .split .copy p.lede { text-align: center; margin-left: auto; }
+  .nav-links { margin-left: 0; }
+  nav a.navlink { margin-left: 0; margin-right: 20px; }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — LuminoCity</title>
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="wrap">
+  <a class="brand" href="index.html"><span class="brand-dot"></span>LuminoCity</a>
+  <div class="nav-links">
+    <a class="navlink" href="index.html#colors">Colours</a>
+    <a class="navlink" href="index.html#venues">For Venues</a>
+    <a class="navlink" href="support.html">Support</a>
+  </div>
+  <a class="store-btn primary nav-cta" href="https://apps.apple.com/app/id6798913821" target="_blank" rel="noopener">Download</a>
+</nav>
+
+<div class="docwrap">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: November 20, 2026</p>
+
+  <p>LuminoCity ("we", "us") operates the LuminoCity mobile app. This policy explains what information the app collects, why, and how it's handled.</p>
+
+  <h2>Information we collect</h2>
+  <table>
+    <tr><th>Data</th><th>Why we collect it</th></tr>
+    <tr><td>Email address</td><td>Sign-in, via a passwordless magic-link email. We don't use or store a password.</td></tr>
+    <tr><td>Username, profile photo</td><td>Shown to other users so friends can find and recognize you. Public by default.</td></tr>
+    <tr><td>Location (while using the app)</td><td>To show nearby venues on the map and to attribute a check-in to the venue you're at. Not collected in the background.</td></tr>
+    <tr><td>Check-ins (venue + energy rating)</td><td>Powers each venue's live energy colour. Individual check-ins are visible only according to your Visibility setting (see below); the venue-level average is anonymous and public.</td></tr>
+    <tr><td>Feed posts (photos, captions)</td><td>Content you choose to share about a venue, shown to people allowed to see your activity.</td></tr>
+    <tr><td>Friends list</td><td>Who you follow / are followed by, so the app can show mutual friends and their activity.</td></tr>
+    <tr><td>Push notification token</td><td>To deliver friend-request and friend-accept notifications. Tied to your device, not usable to identify you by itself.</td></tr>
+    <tr><td>Crash &amp; usage diagnostics</td><td>Aggregated, de-identified crash reports and basic usage analytics, used only to find bugs and understand which features are used.</td></tr>
+  </table>
+
+  <h2>Who can see your activity</h2>
+  <p>Your profile (username, photo) is visible to anyone using the app, so people can find and add you. Your <strong>activity</strong> — check-ins and feed posts — is controlled by the Visibility setting in your profile:</p>
+  <ul>
+    <li><strong>In network</strong> (default) — visible to your mutual friends only.</li>
+    <li><strong>Public</strong> — visible to everyone.</li>
+    <li><strong>Hidden</strong> — visible to no one but you.</li>
+  </ul>
+  <p>Venue-level energy (the colour and pulse you see on the map) is an anonymous average built from everyone's check-ins at that venue. It never reveals who checked in.</p>
+  <p>If you block another user, your activity becomes invisible to them and theirs to you, and any existing friend connection between you is removed.</p>
+
+  <h2>How your information is stored</h2>
+  <p>App data (profiles, check-ins, feed posts, friends) is stored with our database provider, Supabase, which also handles authentication. Photos you post are stored privately and only ever shared with people your Visibility setting allows, via short-lived signed links — never a public, guessable URL.</p>
+  <p>Venue information itself (names, addresses, categories) comes from Foursquare's places data and is not personal information about you.</p>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>We don't sell your data.</li>
+    <li>We don't show ads or share your data with advertisers.</li>
+    <li>We don't track your location when the app isn't open.</li>
+  </ul>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li><strong>Visibility</strong> — change who can see your activity at any time from your profile.</li>
+    <li><strong>Delete a post</strong> — you can delete any feed post you've made; it's removed immediately for everyone.</li>
+    <li><strong>Block or report</strong> — available from any user's profile.</li>
+    <li><strong>Delete your account</strong> — from your profile, which permanently deletes your profile, check-ins, feed posts, and friend connections. See the <a href="delete-account.html">account deletion page</a> for details, including how to request it without the app.</li>
+    <li><strong>Notifications</strong> — push notifications are optional and can be disabled in your device's system settings.</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>LuminoCity is not directed at children, and we don't knowingly collect information from anyone under 13.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes materially, we'll update the date above and, where appropriate, notify you in the app.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or your data: <a href="mailto:nvioli@gmail.com">nvioli@gmail.com</a>.</p>
+</div>
+
+<footer>
+  <div>&copy; <span id="year"></span> LuminoCity</div>
+  <div class="legal-row">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="guidelines.html">Community Guidelines</a>
+    <a href="delete-account.html">Delete My Account</a>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>

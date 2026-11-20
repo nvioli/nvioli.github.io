@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LuminoCity — Get the app</title>
+<meta name="description" content="Get LuminoCity to connect with your friend.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  /* Page-specific layout only — colours, fonts, and .brand/.store-btn base
+     styles come from site.css. This page centers a single column instead
+     of using the site's nav/sections, since it's a redirect utility with
+     no place in the site nav. */
+  body { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+  main { max-width: 360px; text-align: center; }
+  .brand { justify-content: center; margin-bottom: 28px; }
+  p.status { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+  .store-row { flex-direction: column; }
+  .store-btn { justify-content: center; background: var(--surface); color: var(--text); }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="brand"><span class="brand-dot"></span>LuminoCity</div>
+  <p class="status" id="status">Redirecting to the app store…</p>
+  <div class="store-row">
+    <a class="store-btn primary" id="ios-link" href="https://apps.apple.com/app/id6798913821">Download on the App Store</a>
+    <a class="store-btn" id="android-link" href="https://play.google.com/store/apps/details?id=com.luminocity.app">Get it on Google Play</a>
+  </div>
+</main>
+
+<script>
+(function () {
+  var IOS_URL = "https://apps.apple.com/app/id6798913821";
+  var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.luminocity.app";
+
+  // Username is carried for potential future use (e.g. analytics, deep-link
+  // continuation) but has no effect on redirect logic — parsed defensively
+  // since it may be absent.
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var username = params.get("u");
+    if (username) {
+      console.log("LuminoCity invite for:", username);
+    }
+  } catch (e) {
+    // URLSearchParams unsupported or malformed query — ignore, not load-bearing.
+  }
+
+  function detectPlatform() {
+    var uaData = navigator.userAgentData;
+    if (uaData && Array.isArray(uaData.brands)) {
+      // userAgentData.platform covers Android reliably; it has no iOS
+      // equivalent (Apple doesn't ship UA-CH), so iOS still falls through
+      // to the userAgent string check below.
+      var platform = (uaData.platform || "").toLowerCase();
+      if (platform === "android") return "android";
+    }
+
+    var ua = navigator.userAgent || "";
+
+    if (/android/i.test(ua)) {
+      return "android";
+    }
+
+    if (/iphone|ipad|ipod/i.test(ua)) {
+      return "ios";
+    }
+
+    // iPadOS 13+ reports as "Macintosh" in the UA string, distinguishable
+    // from a real Mac only by touch support.
+    if (/macintosh/i.test(ua) && navigator.maxTouchPoints > 1) {
+      return "ios";
+    }
+
+    return "unknown";
+  }
+
+  var platform = detectPlatform();
+  var statusEl = document.getElementById("status");
+
+  if (platform === "ios") {
+    statusEl.textContent = "Redirecting to the App Store…";
+    window.location.replace(IOS_URL);
+  } else if (platform === "android") {
+    statusEl.textContent = "Redirecting to Google Play…";
+    window.location.replace(ANDROID_URL);
+  } else {
+    statusEl.textContent = "Get LuminoCity on your phone:";
+  }
+})();
+</script>
+
+</body>
+</html>
